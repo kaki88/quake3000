@@ -88,27 +88,61 @@
                             <section id="properties">
                                 <div class="row">
 
-<?php 
-foreach($queryOffer as $offer){                              
-echo '<div class="col-md-4 col-sm-4">
-<div class="property equal-height">
-<figure class="tag status">For Sale</figure>
-<figure class="type" title="Apartment"><img src="assets/img/property-types/apartment.png" alt=""></figure>
-<a href="property-detail.html">
-<div class="property-image">';
-echo $this->Html->image('logo.png', ['alt' => 'CakePHP']);
-echo '</div> <div class="overlay"><div class="info">';
-echo '<div class="tag price">'.$offer->price.'</div>';
-echo '<h3>3398 Lodgeville Road</h3>
-<figure>Golden Valley, MN 55427</figure></div>
-<ul class="additional-info">
-<li><header>Area:</header><figure>240m<sup>2</sup></figure></li>
-<li><header>Beds:</header><figure>2</figure></li>
-<li><header>Baths:</header><figure>2</figure></li>
-<li><header>Garages:</header><figure>0</figure></li>
-</ul></div></a>
-</div><!-- /.property -->
-</div><!-- /.col-md-3 -->';
+<?php
+foreach  ($ads as $ad){
+                $tow = $ad->town;
+                $type = $ad->type_ad;
+                $image = $ad->images[0];
+
+echo "
+    <div class='col-md-4 col-sm-4'>
+      <div class='property'>
+         <a href='fiches/$ad->id'>
+            <div class='property-image'>
+            <img alt='' src='../files/$ad->id&$image->id.png '>
+            </div>
+            <div class='overlay'>
+                <div class='info'>
+                    <div class='tag price'>".$ad->price."€
+                    </div>
+                    <h3>".$type->type_name."</h3>
+                    <figure>".$tow->town_zip_code."&nbsp".$tow->town_name."</figure>
+                </div>
+                <ul class='additional-info'>
+
+                    <li><header>Surface :</header>
+                        <figure>$ad->surface<sup>2</sup></figure>
+                    </li>
+
+                    <li><header>Divisible:</header>";
+                        if($ad->is_divisible == 1){
+                        echo "<figure>Oui</figure>";
+                        }else {
+                        echo " <figure>Non</figure>";
+                        }
+                    echo"</li>
+
+                    <li><header>A vendre :</header>";
+                        if($ad->for_sale == 1){
+                        echo "<figure>Oui</figure>";
+                        }else {
+                        echo " <figure>Non</figure>";
+                        }
+                    echo"</li>
+
+                    <li><header>A louer :</header>";
+                    if($ad->for_rent == 1){
+                    echo "<figure>Oui</figure>";
+                    }else {
+                    echo "<figure>Non</figure>";
+                    }
+                    echo"</li>
+
+                </ul>
+            </div>
+        </a>
+      </div><!-- /.property -->
+    </div><!-- /.col-md-4 -->";
 };  ?>
                                                
                                 </div><!-- /.row-->

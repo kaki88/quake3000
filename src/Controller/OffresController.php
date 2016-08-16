@@ -11,19 +11,25 @@ class OffresController extends AppController{
 
 
 //THIBAUT SCRIPT NON FAIT: A MODIFIER
-        $images = TableRegistry::get('images');
-        $offres = TableRegistry::get('ads');
-        $queryImg = $images->find('list');
-        $queryOffer = $offres->find('list');
-        $this->set(compact('queryImg'));
-        $this->set(compact('queryOffer'));
+        $ad = TableRegistry::get('ads');
+        $ads = $ad->find()
+            ->contain(['TypeAds', 'Towns', 'Images'])
+            ->order(['ads.id' => 'DESC']);
+        $this->set(compact('ads'));
+    }
 
 
+    function resultSearch(){
+        $d = TableRegistry::get('ads');
+        $city = $this->request->data['Post']['city'];
+        $d['posts'] = $this->Ads->find('all', array(
+            'conditions' => array(
+                'is_active'=>'1','for_sale'=>'1',
+                "OR"=>array('Ads.id LIKE'=>'%'.$city.'%','Ads.user_id LIKE'=>'%'.$city.'%'))));
+        $this->set($d);
+        $this->render('index');
+    }
 
-      
 }
-}
 
 
-
-?>

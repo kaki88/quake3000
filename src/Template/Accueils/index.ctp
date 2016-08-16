@@ -15,7 +15,11 @@
             <div class="row">
                 <div class="col-md-3 col-sm-4">
                     <div class="search-box map">
-                        <form role="form" id="form-map" class="form-map form-search">
+
+
+
+
+                            <?php echo $this->Form->create('Post',array('id' => 'form-map' , 'class' => 'form-map form-search' , 'type' => 'get','url' => array('controller' => 'offres', 'action' => 'resultSearch'))); ?>
                             <h2>Rechercher un bien</h2>
                             <div class="form-group">
                                 <input name="city" type="text" class="form-control" id="search-box-property-id" placeholder="Ville">

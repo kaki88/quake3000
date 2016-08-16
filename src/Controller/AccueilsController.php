@@ -21,7 +21,8 @@ class AccueilsController extends AppController
             ->order(['ads.id' => 'DESC'])->limit(4);
         $this->set(compact('ads'));
 
-
     }
+
+
 
 }

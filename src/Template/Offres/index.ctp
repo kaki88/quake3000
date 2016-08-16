@@ -88,6 +88,7 @@
                             <section id="properties">
                                 <div class="row">
 
+
 <?php
 foreach  ($ads as $ad){
                 $tow = $ad->town;
@@ -99,7 +100,7 @@ echo "
       <div class='property'>
          <a href='fiches/$ad->id'>
             <div class='property-image'>
-            <img alt='' src='../files/$ad->id&$image->id.png '>
+            <img alt='' height='150' width='300' src='../files/$ad->id&$image->id.png '>
             </div>
             <div class='overlay'>
                 <div class='info'>

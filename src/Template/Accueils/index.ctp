@@ -19,7 +19,7 @@
 
 
 
-                            <?php echo $this->Form->create('Post',array('id' => 'form-map' , 'class' => 'form-map form-search' , 'type' => 'get','url' => array('controller' => 'offres', 'action' => 'resultSearch'))); ?>
+                            <?php echo $this->Form->create('Post',array('id' => 'form-map' , 'class' => 'form-map form-search' , 'type' => 'get','url' => array('controller' => 'offres', 'action' => 'results'))); ?>
                             <h2>Rechercher un bien</h2>
                             <div class="form-group">
                                 <input name="city" type="text" class="form-control" id="search-box-property-id" placeholder="Ville">
@@ -29,7 +29,7 @@
                             </div>
                             <div class="form-group">
                                 <select name="typeoffre">
-                                    <option value="">Type d'offre</option>
+                                    <option value="0">Type d'offre</option>
                                     <option value="1">Location</option>
                                     <option value="2">Vente</option>
                                     <option value="3">Location ou Vente</option>
@@ -48,7 +48,7 @@
 
                             <div class="form-group">
                                 <div class="price-range">
-                                    <input id="price-input" type="text" name="price" value="50;9900">
+                                    <input id="price-input" type="text" name="surface" value="50;9900">
                                 </div>
                             </div>
                             <div class="form-group">

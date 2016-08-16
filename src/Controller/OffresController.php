@@ -19,15 +19,49 @@ class OffresController extends AppController{
     }
 
 
-    function resultSearch(){
-        $d = TableRegistry::get('ads');
-        $city = $this->request->data['Post']['city'];
-        $d['posts'] = $this->Ads->find('all', array(
+    function results(){
+        $adada = TableRegistry::get('ads');
+        $city =$this->request->query['city'];
+        $zipcode =$this->request->query['zipcode'];
+        $typebien =$this->request->query['typebien'];
+        $typeoffre =$this->request->query['typeoffre'];
+        if ($this->request->query['typeoffre'] == 0) {
+            $sale = 1;
+            $rent = 1;
+        }
+        if ($this->request->query['typeoffre'] == 1) {
+            $sale = 1;
+            $rent = 0;
+        }
+        if ($this->request->query['typeoffre'] == 2) {
+            $sale = 0;
+            $rent = 1;
+        }
+        if ($this->request->query['typeoffre'] == 3) {
+            $sale = 1;
+            $rent = 1;
+        }
+        $min = explode( ';', $this->request->query['surface'] );
+
+        $ads = $adada->find('all', array(
             'conditions' => array(
-                'is_active'=>'1','for_sale'=>'1',
-                "OR"=>array('Ads.id LIKE'=>'%'.$city.'%','Ads.user_id LIKE'=>'%'.$city.'%'))));
-        $this->set($d);
-        $this->render('index');
+                'is_active'=>'1',
+                "AND"=>array('town_name LIKE'=>'%'.$city.'%'),
+                "AND"=>array('town_zip_code LIKE'=>'%'.$zipcode.'%'),
+                "AND"=>array('type_ad_id' => $typebien),
+                "AND"=>array('for_sale' => $sale),
+                "AND"=>array('for_rent' => $rent),
+                 "AND"=>array('surface between '.$min[0].' and '.$min[1].'')
+            )))
+            ->contain(['TypeAds', 'Towns', 'Images']);
+        $number = $ads->count();
+        $this->set(compact('ads'));
+        $this->set(compact('number'));
+        $this->set(compact('city'));
+        $this->set(compact('zipcode'));
+        $this->set(compact('typebien'));
+        $this->set(compact('typeoffre'));
+        $this->set(compact('min'));
     }
 
 }

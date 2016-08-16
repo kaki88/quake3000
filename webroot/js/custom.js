@@ -86,11 +86,11 @@ $(document).ready(function($) {
     var $priceSlider = $("#price-input");
     if($priceSlider.length > 0) {
         $priceSlider.slider({
-            from: 1000,
-            to: 299000,
-            step: 1000,
+            from: 0,
+            to: 9900,
+            step: 50,
             round: 1,
-            format: { format: '$ ###,###', locale: 'en' }
+            format: { format: '######', locale: 'fr' }
         });
     }
 

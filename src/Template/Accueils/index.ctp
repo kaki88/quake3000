@@ -1,6 +1,6 @@
 <div class="container">
     <div class="geo-location-wrapper">
-        <span class="btn geo-location"><i class="fa fa-map-marker"></i><span class="text">Find My Position</span></span>
+        <span class="btn geo-location"><i class="fa fa-map-marker"></i><span class="text">Trouver Ma Position</span></span>
     </div>
 </div>
 
@@ -41,36 +41,14 @@
                                     <option value="5">Terrain</option>
                                 </select>
                             </div><!-- /.form-group -->
-                            <div class="form-group">
-                                <?= $this->Form->input('Departement', ['options' => $query]); ?>
-                            </div><!-- /.form-group -->
-                            <div class="form-group">
-                                <select name="district">
-                                    <option value="">District</option>
-                                    <option value="1">Manhattan</option>
-                                    <option value="2">The Bronx</option>
-                                    <option value="3">Brooklyn</option>
-                                    <option value="4">Queens</option>
-                                    <option value="5">Staten Island</option>
-                                </select>
-                            </div><!-- /.form-group -->
-                            <div class="form-group">
-                                <select name="property-type">
-                                    <option value="">Property Type</option>
-                                    <option value="1">Apartment</option>
-                                    <option value="2">Condominium</option>
-                                    <option value="3">Cottage</option>
-                                    <option value="4">Flat</option>
-                                    <option value="5">House</option>
-                                </select>
-                            </div><!-- /.form-group -->
+
                             <div class="form-group">
                                 <div class="price-range">
-                                    <input id="price-input" type="text" name="price" value="1000;299000">
+                                    <input id="price-input" type="text" name="price" value="50;9900">
                                 </div>
                             </div>
                             <div class="form-group">
-                                <button type="submit" class="btn btn-default">Search Now</button>
+                                <button type="submit" class="btn btn-default">Rechercher</button>
                             </div><!-- /.form-group -->
                         </form><!-- /#form-map -->
                     </div><!-- /.search-box.map -->

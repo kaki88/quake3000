@@ -62,13 +62,3 @@
 
 
 
-
-<!--<script async defer-->
-        <!--src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Zs1p5MxC9bnpOoJHyKwR6lTta1Q6Qs8&signed_in=true&callback=initMap"></script>-->
-
-<script type="text/javascript">
-//var propertyId = 0;
-//google.maps.event.addDomListener(window, 'load', initMap(propertyId));
-    $(window).load(function(){
-        initializeOwl(false);
-    });

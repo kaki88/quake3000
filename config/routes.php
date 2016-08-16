@@ -74,7 +74,14 @@ Router::scope('/', function (RouteBuilder $routes) {
 
 
 //editer
-    $routes->connect('/editer',['controller'=>'Editer','action'=>'index']);
+    Router::connect('/editers/:slug', array(
+        'plugin' => false,
+        'controller' => 'Editers',
+        'action' => 'index',
+    ),array(
+            "pass"=>array("slug")
+        )
+    );
 //deposer
     $routes->connect('/deposer',['controller'=>'Deposers','action'=>'index']);
 

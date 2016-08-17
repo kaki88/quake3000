@@ -10,7 +10,7 @@ class OffresController extends AppController{
 	public function index(){
 
 
-//THIBAUT SCRIPT NON FAIT: A MODIFIER
+
         $ad = TableRegistry::get('ads');
         $ads = $ad->find()
             ->contain(['TypeAds', 'Towns', 'Images'])
@@ -63,11 +63,11 @@ class OffresController extends AppController{
         $this->set(compact('typeoffre'));
         $this->set(compact('min'));
     }
+
+
     public function edit($id = null)
     {
-        $ad = $this->Ads->get($id, [
-            'contain' => []
-        ]);
+
         if ($this->request->is(array('patch', 'post', 'put'))) {
             $ad = $this->Ads->patchEntity($ad, $this->request->data);
             if ($this->Ads->save($ad)) {

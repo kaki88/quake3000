@@ -59,30 +59,5 @@ class PartenairesController extends AppController
             echo 'veuillez remplir tout les champs';
         }
     }
-
-    public function login()
-    {
-        $this->loadComponent('Auth', [
-            'loginAction'=> [
-                'controller'=>'Partenaires',
-                'action' => 'add'],
-            'authError'=> 'Impossible de se connecter comme ceci',
-            'authenticate'=> [
-                'Form'
-                ],
-            'storage'=> 'Session'
-            ]);
-        if ($this->request->is('post')) {
-            $user= $this->Auth->identify();
-            if ($user){
-                $this->Auth->setUser($user);
-                return $this->redirect(
-                    ['controller' => 'Membres', 'actions'=>'profil']
-                );
-            }else{
-                $this->Flash->error(__('pseudonyme ou mot de passe incorrect'), ['key' => 'auth']);
-            }
-        }
-
-    }
+    
 }

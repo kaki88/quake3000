@@ -13,7 +13,7 @@ function createHomepageGoogleMap(_latitude,_longitude){
     if( document.getElementById('map') != null ){
         $.getScript("assets/js/locations.js", function(){
             var map = new google.maps.Map(document.getElementById('map'), {
-                zoom: 14,
+                zoom: 7,
                 scrollwheel: false,
                 center: new google.maps.LatLng(_latitude, _longitude),
                 mapTypeId: google.maps.MapTypeId.ROADMAP,
@@ -116,7 +116,7 @@ function createHomepageGoogleMap(_latitude,_longitude){
         // Enable Geo Location on button click
         $('.geo-location').on("click", function() {
             if (navigator.geolocation) {
-                $('#map').addClass('fade-map');
+                // $('#map').addClass('fade-map');
                 navigator.geolocation.getCurrentPosition(success);
             } else {
                 error('Geo Location is not supported');
@@ -160,7 +160,7 @@ function initMap(propertyId) {
         }
 
         var mapOptions = {
-            zoom: 15,
+            zoom: 7,
             center: mapCenter,
             disableDefaultUI: false,
             scrollwheel: false,

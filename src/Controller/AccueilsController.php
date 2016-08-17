@@ -19,8 +19,10 @@ class AccueilsController extends AppController
         $ads = $ad->find()
             ->contain(['TypeAds', 'Towns', 'Images'])
             ->order(['ads.id' => 'DESC'])->limit(4);
+        $markers = $ad->find()
+            ->contain(['TypeAds', 'Towns', 'Images']);
         $this->set(compact('ads'));
-
+        $this->set(compact('markers'));
     }
 
 

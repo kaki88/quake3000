@@ -5895,5 +5895,9 @@ body, html {
 }
 
 .wrapper{
-  height: 100px!important;
+  height: 50px!important;
+}
+
+.map-up{
+  margin-top: -50px!important;
 }

@@ -2,6 +2,7 @@
 <div class="wrapper">
     <div class="col-md-8 col-sm-8">
         <div class="col-md-4 col-sm-4">
+        <?= $this->Flash->render('auth') ?>
 <?= $this->Form->create('post', ['url' => ['controller'=>'Users', 'action' => 'login']]) ?>
             <div class="form-group">
                  <?php echo $this->Form->input('username',['label' => 'Pseudonyme']); ?>

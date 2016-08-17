@@ -44,7 +44,7 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
     }
-        public $components =
+      /*  public $components =
             array('Auth', [ 'loginAction' => [
             'controller'=> 'Users',
             'action'=> 'login'
@@ -54,17 +54,17 @@ class AppController extends Controller
             'action'=>'profil']
             ],
             'authError' => 'Impossible de se connecter comme ça',
-            'authenticate' => [
+            /*'authenticate' => [
                 'Form' => array('passwordHasher' => array(
                     'className' => 'Simple',
                     'hashType' => 'sha256'
-                )
-                )
-            ],
+                //)
+               // )
+            //],
             'storage' => 'Session'
         ])
         ;
-
+*/
 
     /**
      * Before render callback.

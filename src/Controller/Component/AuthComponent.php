@@ -1,4 +1,6 @@
-public $components =
+<?php
+
+/*public $components =
 array('Auth', [ 'loginAction' => [
 'controller'=> 'Users',
 'action'=> 'login'
@@ -16,4 +18,4 @@ array('Auth', [ 'loginAction' => [
 )
 ],
 'storage' => 'Session'
-]);
+]);*/

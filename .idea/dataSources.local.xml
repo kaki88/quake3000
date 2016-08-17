@@ -4,8 +4,6 @@
     <data-source name="MySQL - cake_tuto@localhost" uuid="ee23ec27-a185-424a-b130-3eaedeae6b07">
       <secret-storage>master_key</secret-storage>
       <user-name>root</user-name>
-      <introspection-scope>cake_tuto:</introspection-scope>
-      <resolve-scope>cake_tuto:</resolve-scope>
     </data-source>
   </component>
 </project>

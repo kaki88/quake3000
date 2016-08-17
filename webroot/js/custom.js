@@ -90,7 +90,7 @@ $(document).ready(function($) {
             to: 9900,
             step: 50,
             round: 1,
-            format: { format: '######', locale: 'fr' }
+            format: { format: '###### m²', locale: 'fr' }
         });
     }
 

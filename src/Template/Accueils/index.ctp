@@ -5,7 +5,7 @@
 </div>
 
 <!-- Map -->
-<div id="map" class="has-parallax"></div>
+<div id="map" class="map-up"></div>
 <!-- end Map -->
 
 <!-- Search Box -->
@@ -204,8 +204,11 @@
     <!-- /#partners -->
 </div>
 <script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
-<script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyApVM7J1ORsEb8cGHsa_Ma3SoU8GLK8wfk&signed_in=true&libraries=places&callback=initAutocomplete&region=fr"
-        async defer></script>
+
+<script async defer
+        src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Zs1p5MxC9bnpOoJHyKwR6lTta1Q6Qs8&signed_in=true&callback=initMap"></script>
+
+
 
 
 <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
@@ -231,10 +234,60 @@
 
 
 <script>
-    _latitude = 48.87;
-    _longitude = 2.29;
-    createHomepageGoogleMap(_latitude,_longitude);
-    $(window).load(function(){
-        initializeOwl(false);
+    function initMap() {
+    <?php
+                $i = 0;
+     foreach  ($markers as $row){
+            if(!empty($row->latitude)){
+                $i++;
+                echo "var myLatLng$i = {lat:  $row->latitude , lng: $row->longitude } ;";
+            }
+        }
+        ?>
+        var map = new google.maps.Map(document.getElementById('map'), {
+            zoom: 7,
+            center: {lat: 48.354878, lng: 5.692662}
+        });
+
+    <?php
+                $y = 0;
+        foreach  ($markers as $marker){
+            if(!empty($marker->latitude)){
+if ($marker->for_sale == 1 && $marker->for_rent == 0 ){
+    $typedevente = "en vente";
+    }
+                if ($marker->for_sale == 0 && $marker->for_rent == 1 ){
+                    $typedevente = "en location";
+                }
+                if ($marker->for_sale == 1 && $marker->for_rent == 1 ){
+                    $typedevente = "en location/vente";
+                }
+                $town = $marker->town;
+                $typ = $marker->type_ad;
+                $y++;
+                echo "
+                var marker$y = new google.maps.Marker({
+                    position: myLatLng$y,
+                    map: map,
+                    title: '$typ->type_name $typedevente à $town->town_name ',
+                    url: 'http://www.google.com',
+                });
+                google.maps.event.addListener(marker$y, 'click', function () {
+                    window.location.href = 'fiches/$marker->id';
+                });
+                ";
+            }
+        }
+        ?>
+
+    }
+    $('.geo-location').on("click", function() {
+        if (navigator.geolocation) {
+            // $('#map').addClass('fade-map');
+            navigator.geolocation.getCurrentPosition(success);
+        } else {
+            error('Geo Location is not supported');
+        }
     });
+
 </script>

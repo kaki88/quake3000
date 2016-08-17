@@ -113,7 +113,8 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
-    public function login() {
+    public function login()
+    {
         if ($this->request->is('post')) {
             // Important: Utilisez login() sans argument! Voir warning ci-dessous.
             if ($this->Auth->login()) {
@@ -127,5 +128,9 @@ class UsersController extends AppController
             // Avant 2.7, utilisez
             // $this->Session->setFlash(__('Username ou password incorrect'));
         }
+    }
+
+    public function logout() {
+        $this->redirect($this->Auth->logout());
     }
 }

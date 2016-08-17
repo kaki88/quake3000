@@ -20,10 +20,10 @@
 
                 </header>
                 <section id="property-gallery">
-                    <div class="owl-carousel property-carousel">
+                    <div id="defaut" class="owl-carousel property-carousel">
 
 
-<?php foreach  ($imgs as $image){
+                        <?php foreach  ($imgs as $image){
 echo "
  <div class='property-slide'>
                         <a href='../files/$image->ad_id&$image->id.png' class='image-popup'>
@@ -31,9 +31,9 @@ echo "
                             <img src='../files/$image->ad_id&$image->id.png'>
                         </a>
                     </div>
-";
-}
-?>
+                    ";
+                    }
+                    ?>
 
 
 
@@ -182,4 +182,7 @@ echo "
     $(window).load(function () {
         initializeOwl(false);
     });
+    if ( $('#defaut').text().length < 50 ) {
+        $( "#defaut" ).append( " <div>test</div>" );
+    }
 </script>

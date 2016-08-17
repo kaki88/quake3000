@@ -10,12 +10,13 @@ class OffresController extends AppController{
 	public function index(){
 
 
-
         $ad = TableRegistry::get('ads');
         $ads = $ad->find()
             ->contain(['TypeAds', 'Towns', 'Images'])
             ->order(['ads.id' => 'DESC']);
+        $number = $ads->count();
         $this->set(compact('ads'));
+        $this->set(compact('number'));
     }
 
 
@@ -63,11 +64,11 @@ class OffresController extends AppController{
         $this->set(compact('typeoffre'));
         $this->set(compact('min'));
     }
-
-
     public function edit($id = null)
     {
-
+        $ad = $this->Ads->get($id, [
+            'contain' => []
+        ]);
         if ($this->request->is(array('patch', 'post', 'put'))) {
             $ad = $this->Ads->patchEntity($ad, $this->request->data);
             if ($this->Ads->save($ad)) {

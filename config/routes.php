@@ -74,10 +74,10 @@ Router::scope('/', function (RouteBuilder $routes) {
 
 
 //editer
-    Router::connect('/editers/:slug', array(
+    Router::connect('/Editer/:slug', array(
         'plugin' => false,
-        'controller' => 'Editers',
-        'action' => 'index',
+        'controller' => 'Offres',
+        'action' => 'edit',
     ),array(
             "pass"=>array("slug")
         )

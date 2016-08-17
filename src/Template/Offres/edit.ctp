@@ -50,7 +50,7 @@
 
                                                 <div class="input-group">
 
-                                                    <?= $this->Form->input('price_info',['label' => 'Complément d\'information', 'selected' =>$offers->price_info]); ?>
+                                                    <?= $this->Form->input('price_info',['label' => 'Complément d\'information', 'value' =>$offers->price_info]); ?>
 
                                                 </div>
                                             </div><!-- /.form-group -->

@@ -113,4 +113,19 @@ class UsersController extends AppController
 
         return $this->redirect(['action' => 'index']);
     }
+    public function login() {
+        if ($this->request->is('post')) {
+            // Important: Utilisez login() sans argument! Voir warning ci-dessous.
+            if ($this->Auth->login()) {
+                return $this->redirect($this->Auth->redirectUrl());
+                // Avant 2.3, utilisez
+                // `return $this->redirect($this->Auth->redirect());`
+            }
+            $this->Flash->error(
+                __('Username ou password incorrect')
+            );
+            // Avant 2.7, utilisez
+            // $this->Session->setFlash(__('Username ou password incorrect'));
+        }
+    }
 }

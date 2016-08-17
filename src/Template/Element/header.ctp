@@ -38,7 +38,7 @@
                         </li>
                         <li class="has-child"><?= $this->Html->link('Espace membre','/mon-espace'); ?>
                             <ul class="child-navigation">
-<?php echo'<li>'.$this->Html->link('Se connecter','/partenaires/index').'</li>'; ?>
+<?php echo'<li>'.$this->Html->link('Se connecter','/Users/login').'</li>'; ?>
 <?php echo'<li>'.$this->Html->link("s'inscrire",'/partenaires/add').'</li>'; ?>
                             </ul>
 

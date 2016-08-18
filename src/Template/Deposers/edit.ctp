@@ -61,7 +61,7 @@
 
                                             <div class="input-group">
 
-                                                <?= $this->Form->input('city',['label' => 'Ville']); ?>
+                                                <?= $this->Form->input('city',['label' => 'Ville' , 'type' => 'hidden']); ?>
 
                                             </div>
                                         </div><!-- /.form-group -->

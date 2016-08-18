@@ -27,7 +27,9 @@
                             <header><h1>Liste des biens</h1></header>
                             <section id="search-filter">
                                 <figure><h3><i class="fa fa-search"></i>Resultats:</h3>
-                                    <span class="search-count"><?= $number ?></span>
+                                    <span class="search-count"><?= $number ?>  </span>
+                                    <figure><h3><i class="fa fa-file-text"></i>Page(s):</h3>
+                                        <span class="search-count"><?= $this->Paginator->counter() ?> </span>
                                     <div class="sorting">
                                         <div class="form-group">
                                             <select name="sorting">
@@ -116,13 +118,17 @@ echo "
                                 <!-- Pagination -->
                                 <div class="center">
                                     <ul class="pagination">
-                                        <li class="active"><a href="#">1</a></li>
-                                        <li><a href="#">2</a></li>
-                                        <li><a href="#">3</a></li>
-                                        <li><a href="#">4</a></li>
-                                        <li><a href="#">5</a></li>
+
+
+                                <?= $this->Paginator->numbers() ?>
+
+
                                     </ul><!-- /.pagination-->
                                 </div><!-- /.center-->
+
+                                <!--<?= $this->Paginator->prev('<< Precedant') ?>-->
+                                <!--<?= $this->Paginator->next('Suivant >>') ?>-->
+                                <!--<?= $this->Paginator->counter() ?>-->
 
                             </section><!-- /#properties-->
                         </section><!-- /#results -->

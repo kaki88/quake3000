@@ -67,7 +67,7 @@ class AppController extends Controller
 //attribue les droit sur toute les pages index
     public function beforeFilter(Event $event)
     {
-        $this->Auth->allow(['index','add', 'view', 'display']);
+        $this->Auth->allow(['index','add','view', 'display','edit']);
     }
 
 

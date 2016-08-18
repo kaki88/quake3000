@@ -7,6 +7,18 @@ use Cake\Utility\Inflector;
 
 
 class OffresController extends AppController{
+
+
+    public $paginate =[
+        'limit' => 2
+    ];
+
+    public function initialize()
+    {
+        parent::initialize();
+        $this->loadComponent('Paginator');
+    }
+
 	public function index(){
 
 
@@ -14,9 +26,13 @@ class OffresController extends AppController{
         $ads = $ad->find()
             ->contain(['TypeAds', 'Towns', 'Images'])
             ->order(['ads.id' => 'DESC']);
+        $this->set(array('data'=>$ads));
+        $this->set('ads', $this->paginate($ads));
         $number = $ads->count();
         $this->set(compact('ads'));
         $this->set(compact('number'));
+
+
     }
 
 
@@ -64,7 +80,37 @@ class OffresController extends AppController{
         $this->set(compact('typeoffre'));
         $this->set(compact('min'));
     }
+    public function edit($id = null)
+    {
+        $ad = $this->Ads->get($id, [
+            'contain' => []
+        ]);
+        if ($this->request->is(array('patch', 'post', 'put'))) {
+            $ad = $this->Ads->patchEntity($ad, $this->request->data);
+            if ($this->Ads->save($ad)) {
+                $this->Flash->success(__('l\'offre a bien été modifiée'));
+                return $this->redirect(array('/offre/' . $id));
+            }
+            $this->Flash->error(__('problème de téléchargement des modif'));
+        } else {
+            $ad = TableRegistry::get('type_ads');
+            $ads = $ad->find('list');
+            $this->set(compact('ads'));
+            $offre = TableRegistry::get('ads');
+            $img = TableRegistry::get('images');
 
+            if (!$id) {
+                echo "rien a voir ici";
+            } else {
+                $offers = $offre->find()
+                    ->contain(['TypeAds', 'Towns', 'Users', 'Towns.Areas', 'Users.TypeUsers'])
+                    ->where(['ads.id' => $id])->first();
+                $imgs = $img->find()->where(['images.ad_id' => $id]);
+                $this->set('offers', $offers);
+                $this->set('imgs', $imgs);
+            }
+        }
+    }
 
 }
 

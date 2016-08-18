@@ -1,24 +1,19 @@
 <?php
 namespace App\Controller;
-
 use App\Controller\AppController;
 use Cake\ORM\TableRegistry;
 use Cake\Utility\Inflector;
 
-
 class OffresController extends AppController{
-	public function index(){
-
-
-
+    public function index(){
         $ad = TableRegistry::get('ads');
         $ads = $ad->find()
             ->contain(['TypeAds', 'Towns', 'Images'])
             ->order(['ads.id' => 'DESC']);
+        $number = $ads->count();
         $this->set(compact('ads'));
+        $this->set(compact('number'));
     }
-
-
     function results(){
         $adada = TableRegistry::get('ads');
         $city =$this->request->query['city'];
@@ -42,7 +37,6 @@ class OffresController extends AppController{
             $rent = 1;
         }
         $min = explode( ';', $this->request->query['surface'] );
-
         $ads = $adada->find('all', array(
             'conditions' => array(
                 'is_active'=>'1',
@@ -51,7 +45,7 @@ class OffresController extends AppController{
                 "AND"=>array('type_ad_id' => $typebien),
                 "AND"=>array('for_sale' => $sale),
                 "AND"=>array('for_rent' => $rent),
-                 "AND"=>array('surface between '.$min[0].' and '.$min[1].'')
+                "AND"=>array('surface between '.$min[0].' and '.$min[1].'')
             )))
             ->contain(['TypeAds', 'Towns', 'Images']);
         $number = $ads->count();
@@ -63,11 +57,11 @@ class OffresController extends AppController{
         $this->set(compact('typeoffre'));
         $this->set(compact('min'));
     }
-
-
     public function edit($id = null)
     {
-
+        $ad = $this->Ads->get($id, [
+            'contain' => []
+        ]);
         if ($this->request->is(array('patch', 'post', 'put'))) {
             $ad = $this->Ads->patchEntity($ad, $this->request->data);
             if ($this->Ads->save($ad)) {
@@ -81,7 +75,6 @@ class OffresController extends AppController{
             $this->set(compact('ads'));
             $offre = TableRegistry::get('ads');
             $img = TableRegistry::get('images');
-
             if (!$id) {
                 echo "rien a voir ici";
             } else {
@@ -94,7 +87,6 @@ class OffresController extends AppController{
             }
         }
     }
-
 }
 
 

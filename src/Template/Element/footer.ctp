@@ -1,5 +1,4 @@
 
-
 <div class="wrapper">
     <footer id="page-footer">
         <div class="inner">
@@ -35,9 +34,6 @@
                                 <ul class="list-unstyled list-links">
                                     <li><?= $this->Html->link('Mentions légales','/infos/mention'); ?></li>
                                     <li><?= $this->Html->link('Conditions Générales de Vente','/infos/cgv'); ?></li>
-                                    <li><a href="#">Lien 3</a></li>
-                                    <li><a href="#">Lien 4</a></li>
-                                    <li><a href="#">Lien 5</a></li>
                                 </ul>
                             </article>
                         </div><!-- /.col-sm-3 -->
@@ -54,6 +50,7 @@
         </div><!-- /.inner -->
     </footer>
 </div>
+
 
 
 

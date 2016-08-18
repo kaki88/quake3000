@@ -1,7 +1,7 @@
 <div class="container">
-    <div class="geo-location-wrapper">
-        <span class="btn geo-location"><i class="fa fa-map-marker"></i><span class="text">Trouver Ma Position</span></span>
-    </div>
+    <!--<div class="geo-location-wrapper">-->
+        <!--<span class="btn geo-location"><i class="fa fa-map-marker"></i><span class="text">Trouver Ma Position</span></span>-->
+    <!--</div>-->
 </div>
 
 <!-- Map -->
@@ -114,22 +114,30 @@
                 <?php foreach  ($ads as $ad){
                 $tow = $ad->town;
                 $type = $ad->type_ad;
+                if ($ad->images){
                 $image = $ad->images[0];
+                }
+                else {
+                $image = '';
+                }
                 echo "
-
                 <div class='col-md-3 col-sm-6'>
                     <div class='property'>
                         <a href='fiches/$ad->id'>
-                            <div class='property-image'>
-                                <img alt='' src='../files/$ad->id&$image->id.png '>
-
+                            <div class='property-image'>";
+                                if ($image){
+                                echo "<img alt='' height='150' src='../files/$ad->id&$image->id.png '>";
+                                }
+                                else {
+                                echo "<img alt='' height='150'  src='../files/default.png '>";
+                                }
+echo "
                             </div>
                             <div class='overlay'>
                                 <div class='info'>
                                     <div class='tag price'>$ad->price €</div>
                                     <h3>$type->type_name</h3>
                                     <figure> $tow->town_zip_code, $tow->town_name</figure>
-
                                 </div>
                                 <ul class='additional-info'>
                                     <li>
@@ -214,7 +222,6 @@
 <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
 <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
 <script type="text/javascript" src="../js/markerwithlabel_packed.js"></script>
-<script type="text/javascript" src="../js/infobox.js"></script>
 <script type="text/javascript" src="../js/owl.carousel.min.js"></script>
 <script type="text/javascript" src="../js/bootstrap-select.min.js"></script>
 <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
@@ -229,7 +236,6 @@
 <script type="text/javascript" src="../js/draggable-0.1.js"></script>
 <script type="text/javascript" src="../js/jquery.slider.js"></script>
 <script type="text/javascript" src="../js/markerclusterer_packed.js"></script>
-<script type="text/javascript" src="../js/custom-map.js"></script>
 <script type="text/javascript" src="../js/custom.js"></script>
 
 
@@ -248,7 +254,6 @@
             zoom: 7,
             center: {lat: 48.354878, lng: 5.692662}
         });
-
     <?php
                 $y = 0;
         foreach  ($markers as $marker){
@@ -279,15 +284,25 @@ if ($marker->for_sale == 1 && $marker->for_rent == 0 ){
             }
         }
         ?>
-
     }
     $('.geo-location').on("click", function() {
         if (navigator.geolocation) {
-            // $('#map').addClass('fade-map');
             navigator.geolocation.getCurrentPosition(success);
         } else {
             error('Geo Location is not supported');
         }
     });
-
+    function success(position) {
+        var coords = new google.maps.LatLng(position.coords.latitude, position.coords.longitude);
+        var options = {
+            zoom: 15,
+            center: coords,
+            mapTypeControl: false,
+            navigationControlOptions: {
+                style: google.maps.NavigationControlStyle.SMALL
+            },
+            mapTypeId: google.maps.MapTypeId.ROADMAP
+        };
+        var map = new google.maps.Map(document.getElementById("map"), options);
+    }
 </script>

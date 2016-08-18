@@ -1,25 +1,5 @@
-<html>
 
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="ThemeStarz">
-
-<link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/jquery.slider.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-
-    <title>Liste des biens</title>
-
-</head>
-
-<body class="page-sub-page page-listing-lines page-search-results" id="page-top" data-spy="scroll" data-target=".navigation" data-offset="90">
-<!--wrapper -->
-   <div class="wrapper">
+<div class="wrapper">
         <div id="page-content">
             <!-- Breadcrumb -->
             <div class="container">
@@ -38,42 +18,16 @@
                 <div class="row">
 
 
-                    <div class="col-md-3 col-sm-3">
 
 
-                        <div class="btn-group-vertical">
-
-                            <header><h3>Critères de recherche</h3></header>
-                            <hr/>
-                            <!--Les critères affichés dans ce cadre sont les critères que l'utilisateur a selectionnés-->
-
-                            <button type="button" class="btn btn-default">
-                                Test<span class="glyphicon glyphicon-remove"></span>
-                            </button>
-                            <button type="button" class="btn btn-default">
-                                Test<span class="glyphicon glyphicon-remove"></span>
-                            </button>
-                            <button type="button" class="btn btn-default">
-                                Test<span class="glyphicon glyphicon-remove"></span>
-                            </button>
-                            <button type="button" class="btn btn-default">
-                                Test<span class="glyphicon glyphicon-remove"></span>
-                            </button>
-                            <button type="button" class="btn btn-default">
-                                Test<span class="glyphicon glyphicon-remove"></span>
-                            </button>
-                            <button type="button" class="btn btn-default">
-                                Test<span class="glyphicon glyphicon-remove"></span>
-                            </button>
-                        </div>
 
                     </div><!-- /.col-md-3 -->
-                    <div class="col-md-9 col-sm-9">
+                    <div class="col-md-12 col-sm-12">
                         <section id="results">
                             <header><h1>Liste des biens</h1></header>
                             <section id="search-filter">
                                 <figure><h3><i class="fa fa-search"></i>Resultats:</h3>
-                                    <span class="search-count">28</span>
+                                    <span class="search-count"><?= $number ?></span>
                                     <div class="sorting">
                                         <div class="form-group">
                                             <select name="sorting">
@@ -93,15 +47,25 @@
 foreach  ($ads as $ad){
                 $tow = $ad->town;
                 $type = $ad->type_ad;
-                $image = $ad->images[0];
-
+                                    if ($ad->images){
+                                    $image = $ad->images[0];
+                                    }
+                                    else {
+                                    $image = '';
+                                    }
 echo "
     <div class='col-md-4 col-sm-4'>
       <div class='property'>
          <a href='fiches/$ad->id'>
-            <div class='property-image'>
-            <img alt='' height='150' width='300' src='../files/$ad->id&$image->id.png '>
-            </div>
+             <div class='property-image'>";
+                 if ($image){
+                 echo "<img alt='' height='200' src='../files/$ad->id&$image->id.png '>";
+                 }
+                 else {
+                 echo "<img alt='' height='200'  src='../files/default.png '>";
+                 }
+                 echo "
+             </div>
             <div class='overlay'>
                 <div class='info'>
                     <div class='tag price'>".$ad->price."€
@@ -110,11 +74,9 @@ echo "
                     <figure>".$tow->town_zip_code."&nbsp".$tow->town_name."</figure>
                 </div>
                 <ul class='additional-info'>
-
                     <li><header>Surface :</header>
                         <figure>$ad->surface<sup>2</sup></figure>
                     </li>
-
                     <li><header>Divisible:</header>";
                         if($ad->is_divisible == 1){
                         echo "<figure>Oui</figure>";
@@ -122,7 +84,6 @@ echo "
                         echo " <figure>Non</figure>";
                         }
                     echo"</li>
-
                     <li><header>A vendre :</header>";
                         if($ad->for_sale == 1){
                         echo "<figure>Oui</figure>";
@@ -130,7 +91,6 @@ echo "
                         echo " <figure>Non</figure>";
                         }
                     echo"</li>
-
                     <li><header>A louer :</header>";
                     if($ad->for_rent == 1){
                     echo "<figure>Oui</figure>";
@@ -138,14 +98,13 @@ echo "
                     echo "<figure>Non</figure>";
                     }
                     echo"</li>
-
                 </ul>
             </div>
         </a>
       </div><!-- /.property -->
     </div><!-- /.col-md-4 -->";
 };  ?>
-                                               
+
                                 </div><!-- /.row-->
                                 <!-- Pagination -->
                                 <div class="center">
@@ -165,7 +124,6 @@ echo "
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </div>
-    </div>
 
 
 <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
@@ -185,4 +143,3 @@ echo "
 <!--[if gt IE 8]>
 <script type="text/javascript" src="assets/js/ie.js"></script>
 <![endif]-->
-

@@ -4,7 +4,7 @@
 
     <div class="row">
 
-        <!-- commerce thaon -->
+
         <div class="col-md-8 col-sm-8">
 
             <section id="property-detail">

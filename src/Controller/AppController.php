@@ -43,32 +43,28 @@ class AppController extends Controller
 
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
-//        $this->loadComponent('Auth', [
-//            'authorize' => ['Controller'],
-//            'authenticate' => [
-//                'Form' => [
-//                    'fields' => [
-//                        'username' => 'username',
-//                        'password' => 'password'
-//                    ]
-//                ]
-//            ],
-//            'loginAction' => [
-//                'controller' => 'Users',
-//                'action' => 'login'
-//            ],
-//            'loginRedirect' => [
-//                'controller' => 'Membres',
-//                'action' => 'profil'
-//            ],
-//        ]);
+        $this->loadComponent('Auth', [
+            'authorize' => ['Controller'],
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'username',
+                        'password' => 'password'
+                    ]
+                ]
+            ],
+            'loginAction' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ],
+            'loginRedirect' => [
+                'controller' => 'Membres',
+                'action' => 'profil'
+            ],
+        ]);
 
     }
 //attribue les droit sur toute les pages index
-/*    public function beforeFilter(Event $event)
-    {
-        $this->Auth->allow(['index','add', 'view', 'display']);
-    }*/
 
 
     /**

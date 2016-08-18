@@ -126,6 +126,7 @@ class UsersController extends AppController
        $user = $this->Auth->identify();
             if ($user) {
                 $this->Auth->setUser($user);
+                $this->Auth->user("id");
                 return $this->redirect($this->Auth->redirectUrl());
             }
             $this->Flash->error(__('Mot de passe ou pseudonyme invalide'));

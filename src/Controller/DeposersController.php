@@ -85,10 +85,24 @@ class DeposersController extends AppController
 
         $this->redirect('/fiches/' . $lastad . '');
 
-
-
-
     }
-}
 
 
+    public function edit($id = null)
+    {
+        $ads = TableRegistry::get('ads');
+        $typeAds = $ads->TypeAds->find('list');
+        $article = $ads->get($id);
+        if ($this->request->is(['post', 'put'])) {
+            $ads->patchEntity($article, $this->request->data);
+            if ($ads->save($article)) {
+                $this->Flash->success(__('Votre annonce a été mis à jour.'));
+                return  $this->redirect('/fiches/' . $id . '');
+            }
+            $this->Flash->error(__('Impossible de mettre à jour votre annonce.'));
+        }
+
+        $this->set('article', $article);
+        $this->set('typeAds', $typeAds);
+        }
+    }

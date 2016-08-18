@@ -14,8 +14,10 @@ class MembresController extends AppController
 
     public function isAuthorized($user)
     {
-        if (!is_null($this->Auth->User('id')) && $this->Auth->User('is_admin')) {
+        if (!is_null($this->Auth->User('id')) && $this->Auth->User('is_member')) {
             return true;
+        } else{
+            
         }
     }
 }

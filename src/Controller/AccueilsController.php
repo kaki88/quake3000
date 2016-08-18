@@ -8,6 +8,13 @@ use Cake\ORM\TableRegistry;
 
 class AccueilsController extends AppController
 {
+    public function initialize()
+    {
+        parent::initialize();
+
+        $this->Auth->allow(['index']);
+    }
+
     public function index()
     {
         $dpt = TableRegistry::get('areas');

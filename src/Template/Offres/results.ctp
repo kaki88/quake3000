@@ -92,14 +92,26 @@
 foreach  ($ads as $ad){
                 $tow = $ad->town;
                                 $type = $ad->type_ad;
+                                if ($ad->images){
                                 $image = $ad->images[0];
+                                }
+                                else {
+                                $image = '';
+                                }
 
                                 echo "
                                 <div class='col-md-4 col-sm-4'>
                                     <div class='property'>
-                                        <a href='fiches/$ad->id'>
-                                            <div class='property-image'>
-                                                <img alt='' height='150' width='300' src='../files/$ad->id&$image->id.png '>
+                                        <a href='../fiches/$ad->id'>
+                                            <div class='property-image'>";
+                                                if ($image){
+                                                echo "<img alt='' height='200' src='../files/$ad->id&$image->id.png '>";
+                                                }
+                                                else {
+                                                echo "<img alt='' height='200'  src='../files/default.png '>";
+                                                }
+
+                                                echo "
                                             </div>
                                             <div class='overlay'>
                                                 <div class='info'>
@@ -149,13 +161,17 @@ foreach  ($ads as $ad){
                             <!-- Pagination -->
                             <div class="center">
                                 <ul class="pagination">
-                                    <li class="active"><a href="#">1</a></li>
-                                    <li><a href="#">2</a></li>
-                                    <li><a href="#">3</a></li>
-                                    <li><a href="#">4</a></li>
-                                    <li><a href="#">5</a></li>
+
+
+                                    <?= $this->Paginator->numbers() ?>
+
+
                                 </ul><!-- /.pagination-->
                             </div><!-- /.center-->
+
+                            <!--<?= $this->Paginator->prev('<< Precedant') ?>-->
+                            <!--<?= $this->Paginator->next('Suivant >>') ?>-->
+                            <!--<?= $this->Paginator->counter() ?>-->
 
                         </section><!-- /#properties-->
                     </section><!-- /#results -->
@@ -164,8 +180,6 @@ foreach  ($ads as $ad){
             </div><!-- /.row -->
         </div><!-- /.container -->
     </div>
-</div>
-
 
 <script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
 <script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>

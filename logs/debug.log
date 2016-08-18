@@ -7043,3 +7043,574 @@ Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
 
 
 
+2016-08-18 13:08:44 Notice: Notice (8): Undefined offset: 0 in [/var/www/html/cakephp/imocake-master/src/Template/Offres/results.ctp, line 95]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Offres/results.ctp, line 95
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:08:44 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/cakephp/imocake-master/src/Template/Offres/results.ctp, line 102]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Offres/results.ctp, line 102
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:09:40 Notice: Notice (8): Undefined offset: 0 in [/var/www/html/cakephp/imocake-master/src/Template/Offres/results.ctp, line 95]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Offres/results.ctp, line 95
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:09:40 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/cakephp/imocake-master/src/Template/Offres/results.ctp, line 102]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Offres/results.ctp, line 102
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:10:28 Notice: Notice (8): Trying to get property of non-object in [/var/www/html/cakephp/imocake-master/src/Template/Offres/results.ctp, line 107]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+include - APP/Template/Offres/results.ctp, line 107
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:12:13 Notice: Notice (8): Undefined index: pageCount in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 672]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::numbers() - CORE/src/View/Helper/PaginatorHelper.php, line 672
+include - APP/Template/Offres/results.ctp, line 166
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:12:13 Notice: Notice (8): Undefined index: pageCount in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 591]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 591
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:12:13 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 595]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 595
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:12:13 Notice: Notice (8): Undefined index: perPage in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 598]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 598
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:12:13 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 599]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 599
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:12:13 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 600]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 600
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:12:13 Notice: Notice (8): Undefined index: page in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 613]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 613
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:12:13 Notice: Notice (8): Undefined index: current in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 615]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 615
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:12:13 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 616]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 616
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:50:56 Notice: Notice (8): Undefined index: pageCount in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 672]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::numbers() - CORE/src/View/Helper/PaginatorHelper.php, line 672
+include - APP/Template/Offres/results.ctp, line 166
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:50:56 Notice: Notice (8): Undefined index: pageCount in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 591]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 591
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:50:56 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 595]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 595
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:50:56 Notice: Notice (8): Undefined index: perPage in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 598]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 598
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:50:56 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 599]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 599
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:50:56 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 600]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 600
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:50:56 Notice: Notice (8): Undefined index: page in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 613]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 613
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:50:56 Notice: Notice (8): Undefined index: current in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 615]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 615
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:50:56 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 616]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 616
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:51:13 Notice: Notice (8): Undefined index: pageCount in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 672]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::numbers() - CORE/src/View/Helper/PaginatorHelper.php, line 672
+include - APP/Template/Offres/results.ctp, line 166
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:51:13 Notice: Notice (8): Undefined index: pageCount in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 591]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 591
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:51:13 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 595]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 595
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:51:13 Notice: Notice (8): Undefined index: perPage in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 598]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 598
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:51:13 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 599]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 599
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:51:13 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 600]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 600
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:51:13 Notice: Notice (8): Undefined index: page in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 613]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 613
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:51:13 Notice: Notice (8): Undefined index: current in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 615]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 615
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+
+2016-08-18 13:51:13 Notice: Notice (8): Undefined index: count in [/var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/View/Helper/PaginatorHelper.php, line 616]
+Request URL: /offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900
+Referer URL: http://localhost:8765/
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleError() - CORE/src/Error/BaseErrorHandler.php, line 146
+Cake\View\Helper\PaginatorHelper::counter() - CORE/src/View/Helper/PaginatorHelper.php, line 616
+include - APP/Template/Offres/results.ctp, line 174
+Cake\View\View::_evaluate() - CORE/src/View/View.php, line 995
+Cake\View\View::_render() - CORE/src/View/View.php, line 955
+Cake\View\View::render() - CORE/src/View/View.php, line 587
+Cake\Controller\Controller::render() - CORE/src/Controller/Controller.php, line 611
+Cake\Routing\Dispatcher::_invoke() - CORE/src/Routing/Dispatcher.php, line 120
+Cake\Routing\Dispatcher::dispatch() - CORE/src/Routing/Dispatcher.php, line 87
+[main] - ROOT/webroot/index.php, line 37
+
+
+

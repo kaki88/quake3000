@@ -71,6 +71,8 @@ class OffresController extends AppController{
                  "AND"=>array('surface between '.$min[0].' and '.$min[1].'')
             )))
             ->contain(['TypeAds', 'Towns', 'Images']);
+        $this->set(array('data'=>$ads));
+        $this->set('ads', $this->paginate($ads));
         $number = $ads->count();
         $this->set(compact('ads'));
         $this->set(compact('number'));

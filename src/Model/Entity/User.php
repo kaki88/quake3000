@@ -48,12 +48,7 @@ class User extends Entity
         '*' => true,
         'id' => false
     ];
-
-    protected function _setPassword($password)
-    {
-        return (new DefaultPasswordHasher)->hash($password);
-    }
-
+    
     /**
      * Fields that are excluded from JSON versions of the entity.
      *

@@ -76,8 +76,8 @@ Router::scope('/', function (RouteBuilder $routes) {
 //editer
     Router::connect('/Editer/:slug', array(
         'plugin' => false,
-        'controller' => 'Offres',
-        'action' => 'edit',
+        'controller' => 'Editers',
+        'action' => 'index',
     ),array(
             "pass"=>array("slug")
         )

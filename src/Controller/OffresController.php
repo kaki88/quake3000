@@ -59,7 +59,7 @@ class OffresController extends AppController{
     }
     public function edit($id = null)
     {
-        $ad = $this->Ads->get($id, [
+       /* $ad = $this->Ads->get($id, [
             'contain' => []
         ]);
         if ($this->request->is(array('patch', 'post', 'put'))) {
@@ -84,8 +84,8 @@ class OffresController extends AppController{
                 $imgs = $img->find()->where(['images.ad_id' => $id]);
                 $this->set('offers', $offers);
                 $this->set('imgs', $imgs);
-            }
-        }
+            }*/
+      //  }
     }
 }
 

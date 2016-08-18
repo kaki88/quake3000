@@ -44,37 +44,26 @@ class AppController extends Controller
         $this->loadComponent('RequestHandler');
         $this->loadComponent('Flash');
         $this->loadComponent('Auth', [
+            'authorize'=> ['Controller'],
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'username',
+                        'password'=>'password'
+                    ]
+                ]
+            ],
+            'loginAction' => [
+                'controller' => 'users',
+                'action' => 'login',
+            ],
             'loginRedirect' => [
-                'controller' => 'Membres',
+                'controller' => 'membres',
                 'action' => 'profil'
             ],
-            'logoutRedirect' => [
-                'controller' => 'Accueils',
-                'action' => 'index'
-            ]
         ]);
     }
-    /*  public $components =
-           array('Auth', [ 'loginAction' => [
-           'controller'=> 'Users',
-           'action'=> 'login'
-       ],
-           ['loginRedirect'=>
-           ['controller'=> 'Membres',
-           'action'=>'profil']
-           ],
-           'authError' => 'Impossible de se connecter comme ça',
-           /*'authenticate' => [
-               'Form' => array('passwordHasher' => array(
-                   'className' => 'Simple',
-                   'hashType' => 'sha256'
-               //)
-              // )
-           //],
-           'storage' => 'Session'
-       ])
-       ;
-*/
+//attribue les droit sur toute les pages
     public function beforeFilter(Event $event)
     {
         $this->Auth->allow(['index', 'view', 'display']);

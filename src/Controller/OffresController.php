@@ -5,6 +5,7 @@ use Cake\ORM\TableRegistry;
 use Cake\Utility\Inflector;
 
 class OffresController extends AppController{
+    
     public function index(){
         $ad = TableRegistry::get('ads');
         $ads = $ad->find()

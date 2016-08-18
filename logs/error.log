@@ -47971,3 +47971,198 @@ Stack Trace:
 #1 {main}
 
 
+2016-08-18 12:29:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery-2.1.0.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:31 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery-migrate-1.2.1.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/bootstrap/js/bootstrap.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/smoothscroll.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:32 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/bootstrap-select.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/icheck.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/retina-1.1.0.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:33 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jshashtable-2.1_src.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:34 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery.numberformatter-1.2.3.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery.dependClass-0.1.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/draggable-0.1.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:35 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery.slider.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 12:29:36 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/custom.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+

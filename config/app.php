@@ -226,8 +226,8 @@ return [
              * the following line and set the port accordingly
              */
             //'port' => 'non_standard_port_number',
-            'username' => 'root',
-            'password' => '884000',
+            'username' => 'Toussaint',
+            'password' => '253253',
             'database' => 'cake_tuto',
             'encoding' => 'utf8',
             'timezone' => 'UTC',

@@ -55931,3 +55931,245 @@ Stack Trace:
 #3 {main}
 
 
+2016-08-18 13:58:43 Error: [PDOException] SQLSTATE[28000] [1045] Access denied for user 'Toussaint'@'localhost' (using password: YES)
+Request URL: /
+Referer URL: http://localhost:8765/offres/results?city=&zipcode=&typeoffre=0&typebien=&surface=50%3B9900&page=2
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Database/Driver/PDODriverTrait.php(48): PDO->__construct('mysql:host=loca...', 'Toussaint', '253253', Array)
+#1 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Database/Driver/Mysql.php(90): Cake\Database\Driver\Mysql->_connect('mysql:host=loca...', Array)
+#2 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Database/Schema/BaseSchema.php(45): Cake\Database\Driver\Mysql->connect()
+#3 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Database/Dialect/MysqlDialectTrait.php(63): Cake\Database\Schema\BaseSchema->__construct(Object(Cake\Database\Driver\Mysql))
+#4 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Database/Schema/Collection.php(52): Cake\Database\Driver\Mysql->schemaDialect()
+#5 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Database/Schema/CachedCollection.php(43): Cake\Database\Schema\Collection->__construct(Object(Cake\Database\Connection))
+#6 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Database/Connection.php(317): Cake\Database\Schema\CachedCollection->__construct(Object(Cake\Database\Connection), true)
+#7 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/ORM/Table.php(429): Cake\Database\Connection->schemaCollection()
+#8 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/ORM/Query.php(211): Cake\ORM\Table->schema()
+#9 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/ORM/Query.php(169): Cake\ORM\Query->addDefaultTypes(Object(App\Model\Table\AreasTable))
+#10 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/ORM/Table.php(1243): Cake\ORM\Query->__construct(Object(Cake\Database\Connection), Object(App\Model\Table\AreasTable))
+#11 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/ORM/Table.php(946): Cake\ORM\Table->query()
+#12 /var/www/html/cakephp/imocake-master/src/Controller/AccueilsController.php(21): Cake\ORM\Table->find('list')
+#13 [internal function]: App\Controller\AccueilsController->index()
+#14 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Controller/Controller.php(429): call_user_func_array(Array, Array)
+#15 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(114): Cake\Controller\Controller->invokeAction()
+#16 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Routing/Dispatcher.php(87): Cake\Routing\Dispatcher->_invoke(Object(App\Controller\AccueilsController))
+#17 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#18 {main}
+
+
+2016-08-18 14:06:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery-2.1.0.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:12 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery-migrate-1.2.1.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/bootstrap/js/bootstrap.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/smoothscroll.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:13 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/bootstrap-select.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/icheck.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/retina-1.1.0.min.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jshashtable-2.1_src.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:14 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery.numberformatter-1.2.3.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/tmpl.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:15 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery.dependClass-0.1.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/jquery.slider.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:16 Error: [Cake\Routing\Exception\MissingControllerException] Controller class Assets could not be found.
+Exception Attributes: array (
+  'class' => 'Assets',
+  'plugin' => NULL,
+  'prefix' => NULL,
+  '_ext' => NULL,
+)
+Request URL: /assets/js/custom.js
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/webroot/index.php(37): Cake\Routing\Dispatcher->dispatch(Object(Cake\Network\Request), Object(Cake\Network\Response))
+#1 {main}
+
+
+2016-08-18 14:06:16 Error: Fatal Error (1): Call to a member function allow() on a non-object in [/var/www/html/cakephp/imocake-master/src/Controller/AccueilsController.php, line 15]
+Request URL: /
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-08-18 14:06:17 Error: [Cake\Error\FatalErrorException] Call to a member function allow() on a non-object
+Request URL: /
+Referer URL: http://localhost:8765/offres
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/html/cakephp/imocake-master/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(1, 'Call to a membe...', '/var/www/html/c...', 15)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

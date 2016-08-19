@@ -24,6 +24,7 @@ class DeposersController extends AppController
 
     public function submit()
     {
+        $user= $this->Auth->user('id');
         $img = TableRegistry::get('images');
         $insert_to_img = $img->newEntity();
         $last = $img->find()->select(['id'])->order(['id' => 'DESC'])->first();
@@ -51,9 +52,7 @@ class DeposersController extends AppController
                 }
             }
         }
-
-
-        $user = 1;
+ 
 
         if ($this->request->data['select'] == 1) {
             $sale = 1;

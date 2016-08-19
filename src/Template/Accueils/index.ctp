@@ -48,7 +48,7 @@
 
                             <div class="form-group">
                                 <div class="price-range">
-                                    <input id="price-input" type="text" name="surface" value="50;9900">
+                                    <input id="price-input" type="text" name="surface" value="0;9900">
                                 </div>
                             </div>
                             <div class="form-group">

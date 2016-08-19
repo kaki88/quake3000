@@ -12,14 +12,11 @@ class FichesController extends AppController
     public function initialize()
     {
         parent::initialize();
-        $this->Auth->allow(['index']);
+        $this->Auth->allow(['index','submit']);
     }
     public function index($id =null)
 
     {
-        $mes = TableRegistry::get('messages');
-        $this->set(compact('messages'));
-
 
         $offre = TableRegistry::get('ads');
         $img = TableRegistry::get('images');
@@ -47,13 +44,20 @@ echo "rien a voir ici";
             $this->set('type',$type);
             $this->set('div',$div);
             $this->set('imgs',$imgs);
-        }
+        } 
+        if ($this->request->is('post')){
+        $ids = $id;
+        $NewMessage = TableRegistry::get('messages');
+        $CreatedMessage = $NewMessage->newEntity();
+        $CreatedMessage->message = $this->request->data['message'];
+        $CreatedMessage->email = $this->request->data['email'];
+        $CreatedMessage->name = $this->request->data['name'];
+        $CreatedMessage->ad_id = $ids;
+        $NewMessage->save($CreatedMessage);
+        $this->redirect(['controller' => 'Offres', 'action' => 'index']);
     }
 
-    public function submit(){
-
-        
-
     }
+
     }
 

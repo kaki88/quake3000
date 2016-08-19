@@ -1,4 +1,3 @@
-
 <br/><br/><br/><br/><br/>
 <div class="container">
 
@@ -12,29 +11,28 @@
 
                     <!--Un titre est composé d'un type de bien + une ville-->
 
-                    <h1><?= $offers->type_ad->type_name.' '.$type ?>
+                    <h1><?= $offers->type_ad->type_name . ' ' . $type ?>
                         <?php
 
                         ?></h1>
-                    <figure><?= $offers->town->town_zip_code.' '.$offers->town->town_name ?></figure>
+                    <figure><?= $offers->town->town_zip_code . ' ' . $offers->town->town_name ?></figure>
 
                 </header>
                 <section id="property-gallery">
                     <div id="defaut" class="owl-carousel property-carousel">
 
 
-                        <?php foreach  ($imgs as $image){
-echo "
- <div class='property-slide'>
+                        <?php foreach ($imgs as $image) {
+                            echo "
+                         <div class='property-slide'>
                         <a href='../files/$image->ad_id&$image->id.png' class='image-popup'>
                             <div class='overlay'><h3>Front View</h3></div>
                             <img src='../files/$image->ad_id&$image->id.png'>
                         </a>
                     </div>
                     ";
-                    }
-                    ?>
-
+                        }
+                        ?>
 
 
                     </div><!-- /.property-carousel -->
@@ -48,14 +46,12 @@ echo "
                 <header><h2>Resumé</h2></header>
                 <dl>
                     <dt>Mis en ligne le:</dt>
-                    <dd><?= $offers->created->i18nformat('EEEE dd MMMM YYYY')
-
 
                         ?></dd>
                     <dt>Localisation</dt>
                     <dd><?= $offers->town->town_name ?></dd>
                     <dt>Departement:</dt>
-                    <dd><?= $offers->town->area->area?></dd>
+                    <dd><?= $offers->town->area->area ?></dd>
                     <dt>Prix</dt>
                     <dd><span class="tag price"><?= $offers->price ?> €</span></dd>
                     <dt>Type de bien:</dt>
@@ -67,7 +63,6 @@ echo "
 
                     <dt>Divisible:</dt>
                     <dd><?= $div ?></dd>
-
 
 
                 </dl>
@@ -102,7 +97,7 @@ echo "
                                 <aside class="agent-info clearfix">
                                     <figure><img alt="" src="<?= $this->Url->image('agent-01.jpg'); ?>"></figure>
                                     <div class="agent-contact-info">
-                                        <h3> <?= $offers->user->first_name.' '.$offers->user->last_name.', '.$offers->user->type_user->type_user_name          ?></h3>
+                                        <h3> <?= $offers->user->first_name . ' ' . $offers->user->last_name . ', ' . $offers->user->type_user->type_user_name ?></h3>
 
                                         <dl>
                                             <dt>Adresse:</dt>
@@ -123,21 +118,23 @@ echo "
                             </div><!-- /.col-md-7 -->
                             <div class="col-md-5 col-sm-12">
                                 <div class="agent-form">
-                                <?= $this->Form->create(null, ['url' => ['action' => 'submit']]); ?>
 
-                                    <form role="form" id="form-contact-agent" method="post"  class="clearfix">
+                                    <?= $this->Form->create('Message'); ?>
+
+                                    <form role="form" id="form-contact-agent" method="post" class="clearfix">
                                         <div class="form-group">
 
                                             <?= $this->Form->input('name', ['label' => 'Votre Nom*', 'required']); ?>
-                                            </div><!-- /.form-group -->
+                                        </div><!-- /.form-group -->
                                         <div class="form-group">
-                                            <?= $this->Form->input('email', ['label' => 'Votre Email*', 'required']); ?>
-                                            </div><!-- /.form-group -->
+                                            <?= $this->Form->input('email', ['label' => 'Votre Email*','required']); ?>
+                                        </div><!-- /.form-group -->
                                         <div class="form-group">
-                                             <?= $this->Form->input('message', ['label' => 'Votre Message*', 'required']); ?></div><!-- /.form-group -->
+                                            <?= $this->Form->input('message', ['label' => 'Votre Message*','required']); ?></div>
+                                        <!-- /.form-group -->
                                         <div class="form-group">
-                                        <?= $this->Form->button(__('Envoyer')); ?>
-                                        <?= $this->Form->end(); ?>
+                                            <?= $this->Form->button(__('Valider')) ?>
+                                            <?= $this->Form->end() ?>
                                         </div><!-- /.form-group -->
                                         <div id="form-contact-agent-status"></div>
                                     </form><!-- /#form-contact -->
@@ -146,8 +143,6 @@ echo "
                         </section><!-- /.agent-form -->
                     </div><!-- /.row -->
                 </section><!-- /#contact-agent -->
-
-
             </div>
         </div>
     </div>
@@ -182,7 +177,7 @@ echo "
     $(window).load(function () {
         initializeOwl(false);
     });
-    if ( $('#defaut').text().length < 50 ) {
-        $( "#defaut" ).append( " <div>test</div>" );
+    if ($('#defaut').text().length < 50) {
+        $("#defaut").append(" <div>test</div>");
     }
 </script>

@@ -7,7 +7,13 @@ use App\Controller\AppController;
 
 class InfosController extends AppController
 {
-public function view()
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['view','cgv','mention']);
+    }
+
+    public function view()
 
     {
 

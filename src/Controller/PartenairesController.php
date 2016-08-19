@@ -9,6 +9,12 @@ use Cake\Utility\Inflector;
 
 class PartenairesController extends AppController
 {
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['index','add']);
+    }
+
     public function index($company = null)
     {
         $utilisateur = TableRegistry::get('users');

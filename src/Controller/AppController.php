@@ -39,29 +39,29 @@ class AppController extends Controller
      */
     public function initialize()
     {
-//        parent::initialize();
-//
-//        $this->loadComponent('RequestHandler');
-//        $this->loadComponent('Flash');
-//        $this->loadComponent('Auth', [
-//            'authorize' => ['Controller'],
-//            'authenticate' => [
-//                'Form' => [
-//                    'fields' => [
-//                        'username' => 'username',
-//                        'password' => 'password'
-//                    ]
-//                ]
-//            ],
-//            'loginAction' => [
-//                'controller' => 'Users',
-//                'action' => 'login'
-//            ],
-//            'loginRedirect' => [
-//                'controller' => 'Membres',
-//                'action' => 'profil'
-//            ],
-//        ]);
+        parent::initialize();
+
+        $this->loadComponent('RequestHandler');
+        $this->loadComponent('Flash');
+        $this->loadComponent('Auth', [
+            'authorize' => ['Controller'],
+            'authenticate' => [
+                'Form' => [
+                    'fields' => [
+                        'username' => 'username',
+                        'password' => 'password'
+                    ]
+                ]
+            ],
+            'loginAction' => [
+                'controller' => 'Users',
+                'action' => 'login'
+            ],
+            'loginRedirect' => [
+                'controller' => 'Membres',
+                'action' => 'profil'
+            ],
+        ]);
 
     }
 //attribue les droit sur toute les pages index

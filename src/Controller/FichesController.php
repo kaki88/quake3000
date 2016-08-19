@@ -9,6 +9,12 @@ use Cake\Utility\Inflector;
 
 class FichesController extends AppController
 {
+    public function initialize()
+    {
+        parent::initialize();
+        $this->Auth->allow(['index']);
+    }
+
     public function index($id =null)
 
     {

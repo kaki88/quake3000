@@ -14,10 +14,12 @@ class FichesController extends AppController
         parent::initialize();
         $this->Auth->allow(['index']);
     }
-
     public function index($id =null)
 
     {
+        $mes = TableRegistry::get('messages');
+        $this->set(compact('messages'));
+
 
         $offre = TableRegistry::get('ads');
         $img = TableRegistry::get('images');
@@ -46,7 +48,11 @@ echo "rien a voir ici";
             $this->set('div',$div);
             $this->set('imgs',$imgs);
         }
+    }
 
+    public function submit(){
+
+        
 
     }
     }

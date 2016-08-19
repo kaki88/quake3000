@@ -123,21 +123,21 @@ echo "
                             </div><!-- /.col-md-7 -->
                             <div class="col-md-5 col-sm-12">
                                 <div class="agent-form">
+                                <?= $this->Form->create(null, ['url' => ['action' => 'submit']]); ?>
+
                                     <form role="form" id="form-contact-agent" method="post"  class="clearfix">
                                         <div class="form-group">
-                                            <label for="form-contact-agent-name">Votre Nom<em>*</em></label>
-                                            <input type="text" class="form-control" id="form-contact-agent-name" name="form-contact-agent-name" required>
-                                        </div><!-- /.form-group -->
+
+                                            <?= $this->Form->input('name', ['label' => 'Votre Nom*', 'required']); ?>
+                                            </div><!-- /.form-group -->
                                         <div class="form-group">
-                                            <label for="form-contact-agent-email">Votre  Email<em>*</em></label>
-                                            <input type="email" class="form-control" id="form-contact-agent-email" name="form-contact-agent-email" required>
-                                        </div><!-- /.form-group -->
+                                            <?= $this->Form->input('email', ['label' => 'Votre Email*', 'required']); ?>
+                                            </div><!-- /.form-group -->
                                         <div class="form-group">
-                                            <label for="form-contact-agent-message">Votre Message<em>*</em></label>
-                                            <textarea class="form-control" id="form-contact-agent-message" rows="2" name="form-contact-agent-message" required></textarea>
-                                        </div><!-- /.form-group -->
+                                             <?= $this->Form->input('message', ['label' => 'Votre Message*', 'required']); ?></div><!-- /.form-group -->
                                         <div class="form-group">
-                                            <button type="submit" class="btn pull-right btn-default" id="form-contact-agent-submit">Envoyer le Message</button>
+                                        <?= $this->Form->button(__('Envoyer')); ?>
+                                        <?= $this->Form->end(); ?>
                                         </div><!-- /.form-group -->
                                         <div id="form-contact-agent-status"></div>
                                     </form><!-- /#form-contact -->

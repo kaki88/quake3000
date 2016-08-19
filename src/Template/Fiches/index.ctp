@@ -46,7 +46,7 @@
                 <header><h2>Resumé</h2></header>
                 <dl>
                     <dt>Mis en ligne le:</dt>
-
+                    <dd><?= $offers->created->i18nformat('EEEE dd MMMM YYYY')
                         ?></dd>
                     <dt>Localisation</dt>
                     <dd><?= $offers->town->town_name ?></dd>

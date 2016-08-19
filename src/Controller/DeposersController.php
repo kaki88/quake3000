@@ -7,6 +7,14 @@ use Cake\ORM\TableRegistry;
 
 class DeposersController extends AppController
 {
+    public function isAuthorized($user)
+    {
+        if (!is_null($this->Auth->User('id')) && ($this->Auth->User('is_member') || $this->Auth->User('is_admin') )) {
+            return true;
+        } else {
+
+        }
+    }
     public function index()
     {
         $ad = TableRegistry::get('type_ads');

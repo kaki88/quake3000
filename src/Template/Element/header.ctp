@@ -1,14 +1,6 @@
 
 <div class="wrapper">
-    <div class="navigation"><div>
- <?php
-        if (!is_null($this->request->session()->read('Auth.User.username'))){
-           echo $this->Html->link('logout', array('controller' => 'Users', 'action' => 'logout')).'&nbsp';
-           echo $this->Html->link('profil', array('controller' => 'Membres', 'action' => 'profil')).'&nbsp';
-            echo $this->Html->link('mes offres', array('controller' => 'Offres', 'action' => 'listoffre'));
-        };
-        ?>
-        </div>
+    <div class="navigation">
         <div class="container">
             <header class="navbar" id="top" role="banner">
                 <div class="navbar-header">
@@ -45,10 +37,20 @@
                             </ul>
                         </li>
                         <li class="has-child"><?= $this->Html->link('Espace membre','/mon-espace'); ?>
-                            <ul class="child-navigation">
-<?php echo'<li>'.$this->Html->link('Se connecter','/Users/login').'</li>'; ?>
-<?php echo'<li>'.$this->Html->link("s'inscrire",'/partenaires/add').'</li>'; ?>
-                            </ul>
+                            <?php  if (is_null($this->request->session()->read('Auth.User.username'))){
+                            echo"<ul class='child-navigation'><li>".
+                            $this->Html->link('Se connecter','/Users/login')."
+ </li><li>
+                            ".$this->Html->link('inscription','/partenaires/add')." </li></ul>";
+                    }
+                            else {
+                            echo"<ul class='child-navigation'>
+                                <li> ".$this->Html->link('Mon Profil','/mon-espace')." </li>
+                                <li> ".$this->Html->link('Mes annonces','/mes-annonces')." </li>
+                                <li>
+                                ".$this->Html->link('Deconnexion','/Users/logout')." </li></ul>";
+                            }
+                    ?>
 
                         </li>
                         <li class="has-child"><?= $this->Html->link('Contact','/nous-contacter'); ?>

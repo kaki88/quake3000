@@ -48,12 +48,12 @@ class OffresController extends AppController{
             $rent = 1;
         }
         if ($this->request->query['typeoffre'] == 1) {
-            $sale = 1;
-            $rent = 0;
-        }
-        if ($this->request->query['typeoffre'] == 2) {
             $sale = 0;
             $rent = 1;
+        }
+        if ($this->request->query['typeoffre'] == 2) {
+            $sale = 1;
+            $rent = 0;
         }
         if ($this->request->query['typeoffre'] == 3) {
             $sale = 1;

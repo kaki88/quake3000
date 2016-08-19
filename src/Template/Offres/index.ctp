@@ -15,13 +15,66 @@
             </style>
 
             <div class="container">
+
+
                 <div class="row">
 
-
-
-
-
                     </div><!-- /.col-md-3 -->
+                <!-- Search Box -->
+                <div class="">
+                    <?php echo $this->Form->create('Post',array('id' => 'form-map' , 'class' => 'form-map form-search' , 'type' => 'get','url' => array('controller' => 'offres', 'action' => 'results'))); ?>
+                    <h2>Rechercher un bien</h2>
+                    <div class="search-box-inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="">
+
+
+                                        <div class="form-group">
+                                            <input name="city" type="text" class="form-control" id="search-box-property-id" placeholder="Ville">
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="zipcode" type="text" class="form-control" id="search-box-property-idd" placeholder="Code postal">
+                                        </div>
+                                    </div></div>
+                                    <div class="col-md-6 col-sm-6">
+                                        <div class="">
+                                        <div class="form-group">
+                                            <select name="typeoffre">
+                                                <option value="0">Type d'offre</option>
+                                                <option value="1">Location</option>
+                                                <option value="2">Vente</option>
+                                                <option value="3">Location ou Vente</option>
+                                            </select>
+                                        </div><!-- /.form-group -->
+                                        <div class="form-group">
+                                            <select name="typebien">
+                                                <option value="">Type de bien</option>
+                                                <option value="1">Bureau</option>
+                                                <option value="2">Commerce</option>
+                                                <option value="3">Entrepôt</option>
+                                                <option value="4">Industrie</option>
+                                                <option value="5">Terrain</option>
+                                            </select>
+                                        </div><!-- /.form-group -->
+
+                                        <div class="form-group">
+                                            <div class="price-range">
+                                                <input id="price-input" type="text" name="surface" value="0;9900">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-default">Rechercher</button>
+                                        </div><!-- /.form-group -->
+                                        </form><!-- /#form-map -->
+                                    </div><!-- /.search-box.map -->
+                                </div><!-- /.col-md-3 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container -->
+                    </div><!-- /.search-box-inner -->
+                </div>
+                <!-- end Search Box -->
                     <div class="col-md-12 col-sm-12">
                         <section id="results">
                             <header><h1>Liste des biens</h1></header>
@@ -41,6 +94,12 @@
                                     </div>
                                 </figure>
                             </section>
+
+
+
+
+
+
                             <section id="properties">
                                 <div class="row">
 
@@ -138,22 +197,22 @@ echo "
             </div><!-- /.container -->
         </div>
 
-
-<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
-<script type="text/javascript" src="assets/js/icheck.min.js"></script>
-<script type="text/javascript" src="assets/js/retina-1.1.0.min.js"></script>
-<script type="text/javascript" src="assets/js/jshashtable-2.1_src.js"></script>
-<script type="text/javascript" src="assets/js/jquery.numberformatter-1.2.3.js"></script>
-<script type="text/javascript" src="assets/js/tmpl.js"></script>
-<script type="text/javascript" src="assets/js/jquery.dependClass-0.1.js"></script>
-<script type="text/javascript" src="assets/js/draggable-0.1.js"></script>
-<script type="text/javascript" src="assets/js/jquery.slider.js"></script>
-<script type="text/javascript" src="assets/js/custom.js"></script>
-<!--[if gt IE 8]>
-<script type="text/javascript" src="assets/js/ie.js"></script>
-<![endif]-->
-
+   <script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
+   <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+   <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+   <script type="text/javascript" src="../js/markerwithlabel_packed.js"></script>
+   <script type="text/javascript" src="../js/owl.carousel.min.js"></script>
+   <script type="text/javascript" src="../js/bootstrap-select.min.js"></script>
+   <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+   <script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+   <script type="text/javascript" src="../js/icheck.min.js"></script>
+   <script type="text/javascript" src="../js/jquery.vanillabox-0.1.5.min.js"></script>
+   <script type="text/javascript" src="../js/retina-1.1.0.min.js"></script>
+   <script type="text/javascript" src="../js/jshashtable-2.1_src.js"></script>
+   <script type="text/javascript" src="../js/jquery.numberformatter-1.2.3.js"></script>
+   <script type="text/javascript" src="../js/tmpl.js"></script>
+   <script type="text/javascript" src="../js/jquery.dependClass-0.1.js"></script>
+   <script type="text/javascript" src="../js/draggable-0.1.js"></script>
+   <script type="text/javascript" src="../js/jquery.slider.js"></script>
+   <script type="text/javascript" src="../js/markerclusterer_packed.js"></script>
+   <script type="text/javascript" src="../js/custom.js"></script>

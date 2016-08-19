@@ -37,37 +37,62 @@
         <div class="container">
             <div class="row">
 
-
-                <div class="col-md-3 col-sm-3">
-
-
-                    <div class="btn-group-vertical">
-
-                        <header><h3>Critères de recherche</h3></header>
-                        <hr/>
-                        <!--Les critères affichés dans ce cadre sont les critères que l'utilisateur a selectionnés-->
-
-                        <button type="button" class="btn btn-default">
-                            <?= $city ?><span class="glyphicon glyphicon-remove"></span>
-                        </button>
-                        <button type="button" class="btn btn-default">
-                            <?= $zipcode ?><span class="glyphicon glyphicon-remove"></span>
-                        </button>
-                        <button type="button" class="btn btn-default">
-                            <?= $typebien ?><span class="glyphicon glyphicon-remove"></span>
-                        </button>
-                        <button type="button" class="btn btn-default">
-                            <?= $typeoffre ?><span class="glyphicon glyphicon-remove"></span>
-                        </button>
-                        <button type="button" class="btn btn-default">
-                            entre <?= $min[0] ?> et <?= $min[1] ?> m2<span class="glyphicon glyphicon-remove"></span>
-                        </button>
+                <!-- Search Box -->
+                <div class="">
+                    <?php echo $this->Form->create('Post',array('id' => 'form-map' , 'class' => 'form-map form-search' , 'type' => 'get','url' => array('controller' => 'offres', 'action' => 'results'))); ?>
+                    <h2>Rechercher un bien</h2>
+                    <div class="search-box-inner">
+                        <div class="container">
+                            <div class="row">
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="">
 
 
-                    </div>
+                                        <div class="form-group">
+                                            <input name="city" type="text" class="form-control" id="search-box-property-id" placeholder="Ville" value="<?= $city ?>">
+                                        </div>
+                                        <div class="form-group">
+                                            <input name="zipcode" type="text" class="form-control" id="search-box-property-idd" placeholder="Code postal" value="<?= $zipcode ?>">
+                                        </div>
+                                    </div></div>
+                                <div class="col-md-6 col-sm-6">
+                                    <div class="">
+                                        <div class="form-group">
+                                            <select name="typeoffre">
+                                                <option value=""  >Type d'offre</option>
+                                                <option value="1" <?php if ($typeoffre == 1) {echo "selected";} ?>>Location</option>
+                                                <option value="2" <?php if ($typeoffre == 2) {echo "selected";} ?> >Vente</option>
+                                                <option value="3" <?php if ($typeoffre == 3) {echo "selected";} ?>>Location ou Vente</option>
+                                            </select>
+                                        </div><!-- /.form-group -->
+                                        <div class="form-group">
+                                            <select name="typebien">
+                                                <option value="">Type de bien</option>
+                                                <option value="1" <?php if ($typebien == 1) {echo "selected";} ?> >Bureau</option>
+                                                <option value="2" <?php if ($typebien == 2) {echo "selected";} ?>>Commerce</option>
+                                                <option value="3" <?php if ($typebien == 3) {echo "selected";} ?>>Entrepôt</option>
+                                                <option value="4" <?php if ($typebien == 4) {echo "selected";} ?>>Industrie</option>
+                                                <option value="5" <?php if ($typebien == 5) {echo "selected";} ?>>Terrain</option>
+                                            </select>
+                                        </div><!-- /.form-group -->
 
-                </div><!-- /.col-md-3 -->
-                <div class="col-md-9 col-sm-9">
+                                        <div class="form-group">
+                                            <div class="price-range">
+                                                <input id="price-input" type="text" name="surface" value="<?= $min[0] ?>;<?= $min[1] ?>">
+                                            </div>
+                                        </div>
+                                        <div class="form-group">
+                                            <button type="submit" class="btn btn-default">Rechercher</button>
+                                        </div><!-- /.form-group -->
+                                        </form><!-- /#form-map -->
+                                    </div><!-- /.search-box.map -->
+                                </div><!-- /.col-md-3 -->
+                            </div><!-- /.row -->
+                        </div><!-- /.container -->
+                    </div><!-- /.search-box-inner -->
+                </div>
+                <!-- end Search Box -->
+                <div class="col-md-12 col-sm-12">
                     <section id="results">
                         <header><h1>Liste des biens</h1></header>
                         <section id="search-filter">
@@ -181,21 +206,22 @@ foreach  ($ads as $ad){
         </div><!-- /.container -->
     </div>
 
-<script type="text/javascript" src="assets/js/jquery-2.1.0.min.js"></script>
-<script type="text/javascript" src="assets/js/jquery-migrate-1.2.1.min.js"></script>
-<script type="text/javascript" src="assets/bootstrap/js/bootstrap.min.js"></script>
-<script type="text/javascript" src="assets/js/smoothscroll.js"></script>
-<script type="text/javascript" src="assets/js/bootstrap-select.min.js"></script>
-<script type="text/javascript" src="assets/js/icheck.min.js"></script>
-<script type="text/javascript" src="assets/js/retina-1.1.0.min.js"></script>
-<script type="text/javascript" src="assets/js/jshashtable-2.1_src.js"></script>
-<script type="text/javascript" src="assets/js/jquery.numberformatter-1.2.3.js"></script>
-<script type="text/javascript" src="assets/js/tmpl.js"></script>
-<script type="text/javascript" src="assets/js/jquery.dependClass-0.1.js"></script>
-<script type="text/javascript" src="assets/js/draggable-0.1.js"></script>
-<script type="text/javascript" src="assets/js/jquery.slider.js"></script>
-<script type="text/javascript" src="assets/js/custom.js"></script>
-<!--[if gt IE 8]>
-<script type="text/javascript" src="assets/js/ie.js"></script>
-<![endif]-->
-
+    <script type="text/javascript" src="../js/jquery-2.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/jquery-migrate-1.2.1.min.js"></script>
+    <script type="text/javascript" src="../bootstrap/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="../js/markerwithlabel_packed.js"></script>
+    <script type="text/javascript" src="../js/owl.carousel.min.js"></script>
+    <script type="text/javascript" src="../js/bootstrap-select.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.placeholder.js"></script>
+    <script type="text/javascript" src="../js/icheck.min.js"></script>
+    <script type="text/javascript" src="../js/jquery.vanillabox-0.1.5.min.js"></script>
+    <script type="text/javascript" src="../js/retina-1.1.0.min.js"></script>
+    <script type="text/javascript" src="../js/jshashtable-2.1_src.js"></script>
+    <script type="text/javascript" src="../js/jquery.numberformatter-1.2.3.js"></script>
+    <script type="text/javascript" src="../js/tmpl.js"></script>
+    <script type="text/javascript" src="../js/jquery.dependClass-0.1.js"></script>
+    <script type="text/javascript" src="../js/draggable-0.1.js"></script>
+    <script type="text/javascript" src="../js/jquery.slider.js"></script>
+    <script type="text/javascript" src="../js/markerclusterer_packed.js"></script>
+    <script type="text/javascript" src="../js/custom.js"></script>

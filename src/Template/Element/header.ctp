@@ -1,14 +1,6 @@
 
 <div class="wrapper">
-    <div class="navigation"><div>
- <?php
-        if (!is_null($this->request->session()->read('Auth.User.username'))){
-           echo $this->Html->link('logout', array('controller' => 'Users', 'action' => 'logout')).'&nbsp';
-           echo $this->Html->link('profil', array('controller' => 'Membres', 'action' => 'profil')).'&nbsp';
-            echo $this->Html->link('mes offres', array('controller' => 'Offres', 'action' => 'listoffre'));
-        };
-        ?>
-        </div>
+    <div class="navigation">
         <div class="container">
             <header class="navbar" id="top" role="banner">
                 <div class="navbar-header">
@@ -51,6 +43,13 @@
  </li><li>
                             ".$this->Html->link('inscription','/partenaires/add')." </li></ul>";
                     }
+                            else {
+                            echo"<ul class='child-navigation'>
+                                <li> ".$this->Html->link('Mon Profil','/mon-espace')." </li>
+                                <li> ".$this->Html->link('Mes annonces','/mes-annonces')." </li>
+                                <li>
+                                ".$this->Html->link('Deconnexion','/Users/logout')." </li></ul>";
+                            }
                     ?>
 
                         </li>

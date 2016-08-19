@@ -108,8 +108,9 @@
                                             <dd><?= $offers->user->phone ?></dd>
                                             <dt>Site web:</dt>
                                             <dd><a><?= $offers->user->website_link ?></a></dd>
-                                            <dt>Email:</dt>
-                                            <dd><a href="mailto:#"><?= $offers->user->email ?></a></dd>
+                                            <dt><?php if ($offers->user->is_hidden == 1){ ?> Email:</dt>
+                                            <dd><a href="mailto:#"><?= $offers->user->email ;
+                                                    }?></a></dd>
 
                                         </dl>
 

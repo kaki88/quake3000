@@ -72,6 +72,8 @@ Router::scope('/', function (RouteBuilder $routes) {
 //espace membre membre/Mon-Espace
     $routes->connect('mon-espace',['controller'=>'Membres','action'=>'profil']);
 
+//mes annonces
+    $routes->connect('mes-annonces',['controller'=>'Mesannonces','action'=>'index']);
 
 //editer
     Router::connect('/editer/:slug', array(

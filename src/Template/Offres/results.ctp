@@ -1,24 +1,3 @@
-<html>
-
-<head>
-    <meta charset="UTF-8"/>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="author" content="ThemeStarz">
-
-    <link href='http://fonts.googleapis.com/css?family=Roboto:300,400,700' rel='stylesheet' type='text/css'>
-    <link href="assets/fonts/font-awesome.css" rel="stylesheet" type="text/css">
-    <link rel="stylesheet" href="assets/bootstrap/css/bootstrap.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/bootstrap-select.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/jquery.slider.min.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/owl.carousel.css" type="text/css">
-    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
-
-    <title>Liste des biens</title>
-
-</head>
-
-<body class="page-sub-page page-listing-lines page-search-results" id="page-top" data-spy="scroll" data-target=".navigation" data-offset="90">
-<!--wrapper -->
 <div class="wrapper">
     <div id="page-content">
         <!-- Breadcrumb -->
@@ -35,7 +14,11 @@
         </style>
 
         <div class="container">
+
+
             <div class="row">
+
+            </div><!-- /.col-md-3 -->
 
                 <!-- Search Box -->
                 <div class="">
@@ -109,7 +92,7 @@
                                 </div>
                             </figure>
                         </section>
-                        <section id="properties">
+                        <div id="properties">
                             <div class="row">
 
 
@@ -127,7 +110,7 @@ foreach  ($ads as $ad){
                                 echo "
                                 <div class='col-md-4 col-sm-4'>
                                     <div class='property'>
-                                        <a href='../fiches/$ad->id'>
+                                        <a href='fiches/$ad->id'>
                                             <div class='property-image'>";
                                                 if ($image){
                                                 echo "<img alt='' height='200' src='../files/$ad->id&$image->id.png '>";
@@ -198,7 +181,7 @@ foreach  ($ads as $ad){
                             <!--<?= $this->Paginator->next('Suivant >>') ?>-->
                             <!--<?= $this->Paginator->counter() ?>-->
 
-                        </section><!-- /#properties-->
+                    </section><!-- /#properties-->
                     </section><!-- /#results -->
                 </div><!-- /.col-md-9 -->
 

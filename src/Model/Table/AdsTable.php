@@ -64,12 +64,15 @@ class AdsTable extends Table
             'joinType' => 'INNER'
         ]);
         $this->hasMany('Images', [
-            'foreignKey' => 'ad_id'
+            'dependent' => true, 'foreignKey' => 'ad_id'
         ]);
         $this->hasMany('Messages', [
             'foreignKey' => 'ad_id'
         ]);
     }
+
+
+
 
     /**
      * Default validation rules.

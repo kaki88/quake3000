@@ -60020,3 +60020,24 @@ Stack Trace:
 #1 {main}
 
 
+2016-08-19 14:30:14 Error: Fatal Error (4): syntax error, unexpected 'if' (T_IF) in [/var/www/cheval/quake3000/src/Template/Fiches/index.ctp, line 111]
+Request URL: /fiches/9
+Referer URL: http://localhost:8765/editer/9
+Client IP: 127.0.0.1
+Trace:
+Cake\Error\BaseErrorHandler::handleFatalError() - CORE/src/Error/BaseErrorHandler.php, line 215
+Cake\Error\BaseErrorHandler::Cake\Error\{closure}() - CORE/src/Error/BaseErrorHandler.php, line 98
+[main] - [internal], line ??
+
+
+
+2016-08-19 14:30:14 Error: [Cake\Error\FatalErrorException] syntax error, unexpected 'if' (T_IF)
+Request URL: /fiches/9
+Referer URL: http://localhost:8765/editer/9
+Client IP: 127.0.0.1
+Stack Trace:
+#0 /var/www/cheval/quake3000/vendor/cakephp/cakephp/src/Error/BaseErrorHandler.php(98): Cake\Error\BaseErrorHandler->handleFatalError(4, 'syntax error, u...', '/var/www/cheval...', 111)
+#1 [internal function]: Cake\Error\BaseErrorHandler->Cake\Error\{closure}()
+#2 {main}
+
+

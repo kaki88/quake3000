@@ -1,6 +1,14 @@
 
 <div class="wrapper">
-    <div class="navigation">
+    <div class="navigation"><div>
+ <?php
+        if (!is_null($this->request->session()->read('Auth.User.username'))){
+           echo $this->Html->link('logout', array('controller' => 'Users', 'action' => 'logout')).'&nbsp';
+           echo $this->Html->link('profil', array('controller' => 'Membres', 'action' => 'profil')).'&nbsp';
+            echo $this->Html->link('mes offres', array('controller' => 'Offres', 'action' => 'listoffre'));
+        };
+        ?>
+        </div>
         <div class="container">
             <header class="navbar" id="top" role="banner">
                 <div class="navbar-header">

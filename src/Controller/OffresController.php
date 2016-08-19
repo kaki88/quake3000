@@ -17,6 +17,7 @@ class OffresController extends AppController{
     {
         parent::initialize();
         $this->loadComponent('Paginator');
+        $this->Auth->allow(['index','results']);
     }
 
 	public function index(){
@@ -60,17 +61,38 @@ class OffresController extends AppController{
         }
         $min = explode( ';', $this->request->query['surface'] );
 
-        $ads = $adada->find('all', array(
-            'conditions' => array(
-                'is_active'=>'1',
-                "AND"=>array('town_name LIKE'=>'%'.$city.'%'),
-                "AND"=>array('town_zip_code LIKE'=>'%'.$zipcode.'%'),
-                "AND"=>array('type_ad_id' => $typebien),
-                "AND"=>array('for_sale' => $sale),
-                "AND"=>array('for_rent' => $rent),
-                 "AND"=>array('surface between '.$min[0].' and '.$min[1].'')
-            )))
+        $array = [];
+        if (!empty($this->request->query['city'])) {
+            $push = $this->request->query['city'];
+            $pushall =  "town_name LIKE '%$push%'";
+            array_push($array, $pushall);
+        }
+        if (!empty($this->request->query['zipcode'])) {
+            $push = $this->request->query['zipcode'];
+            $pushall =  "town_zip_code LIKE '%$push%'";
+            array_push($array, $pushall);
+        }
+        if (!empty($this->request->query['typebien'])) {
+            $push = $this->request->query['typebien'];
+            $pushall =  "type_ad_id = '$push'";
+            array_push($array, $pushall);
+        }
+        if (!empty($this->request->query['typeoffre'])) {
+            $push = $this->request->query['typeoffre'];
+            $pushall =  "for_sale = '$sale' AND for_rent = '$rent' ";
+            array_push($array, $pushall);
+        }
+        $ads = $adada->find()
+            ->where(['is_active' => 1])
+            ->andWhere([
+                'surface > '.$min[0].' AND surface < '.$min[1].'',
+                $array
+            ])
             ->contain(['TypeAds', 'Towns', 'Images']);
+
+
+
+
         $this->set(array('data'=>$ads));
         $this->set('ads', $this->paginate($ads));
         $number = $ads->count();
@@ -81,6 +103,7 @@ class OffresController extends AppController{
         $this->set(compact('typebien'));
         $this->set(compact('typeoffre'));
         $this->set(compact('min'));
+        $this->set(compact('array'));
     }
     public function edit($id = null)
     {

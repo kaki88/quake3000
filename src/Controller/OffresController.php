@@ -10,7 +10,7 @@ class OffresController extends AppController{
 
 
     public $paginate =[
-        'limit' => 2
+        'limit' => 10
     ];
 
     public function initialize()

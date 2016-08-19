@@ -9,21 +9,22 @@ use Cake\Utility\Inflector;
 
 class PartenairesController extends AppController
 {
+    public $paginate =[
+        'limit' => 10
+    ];
     public function initialize()
     {
         parent::initialize();
+        $this->loadComponent('Paginator');
         $this->Auth->allow(['index','add']);
     }
 
-    public function index($company = null)
+    public function index()
     {
         $utilisateur = TableRegistry::get('users');
-        if (!$company) {
             $query = $utilisateur->find()->where(['is_member' => 1, 'is_active' => 1]);
-        } else {
-            $modif = str_replace('-', ' ', $company);
-            $query = $utilisateur->find()->where(['company_name' => $modif]);
-        }
+            $this->set('query', $this->paginate($query));
+
 
         $this->set('query', $query);
     }

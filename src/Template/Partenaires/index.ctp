@@ -9,10 +9,10 @@
             </ol>
         </div>
         <!-- end Breadcrumb -->
-        <div class="container">
+        <div class="container ">
             <div class="row">
                 <!-- Agent Detail -->
-                <div class="col-md-9- col-sm-9">
+                <div class="col-md-9- col-sm-9 ">
                     <section id="agents-listing">
                         <header><h1>Liste des partenaires</h1></header>
                         <div class="row">
@@ -60,13 +60,13 @@ echo '<tr><td>'.$uti->first_name.'</td><td>'.$uti->last_name.'</td><td>'.$uti->c
 
                     <!-- Pagination -->
      <div class="center">
-                        <ul class="pagination">
-                            <li class="active"><a href="#">1</a></li>
-                            <li><a href="#">2</a></li>
-                            <li><a href="#">3</a></li>
-                            <li><a href="#">4</a></li>
-                            <li><a href="#">5</a></li>
-                        </ul><!-- /.pagination-->
+         <ul class="pagination">
+
+
+             <?= $this->Paginator->numbers() ?>
+
+
+         </ul><!-- /.pagination-->
                     </div><!-- /.center-->
                 </div><!-- /.col-md-9 -->
                 <!-- end Agent Detail -->

@@ -15,11 +15,18 @@ class OffresController extends AppController{
 
     public function initialize()
     {
-        parent::initialize();
-        $this->loadComponent('Paginator');
-        $this->Auth->allow(['index','results']);
-    }
 
+    }
+    public function isAuthorized($user)
+    {
+        if (!is_null($this->Auth->User('id')) && ($this->Auth->User('is_admin') || $this->Auth->User('is_member'))) {
+            return true;
+        } else{
+            parent::initialize();
+            $this->loadComponent('Paginator');
+            $this->Auth->allow(['index','results']);
+        }
+    }
 	public function index(){
 
 
@@ -135,6 +142,16 @@ class OffresController extends AppController{
                 $this->set('imgs', $imgs);
             }
         }
+    }
+
+
+
+    public function supprimer($id)
+    {
+        $ad = TableRegistry::get('ads');
+        $entity = $ad->get($id);
+        $result = $ad->delete($entity);
+        $this->redirect('/mes-annonces');
     }
 
 }

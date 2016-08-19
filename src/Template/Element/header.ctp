@@ -45,10 +45,13 @@
                             </ul>
                         </li>
                         <li class="has-child"><?= $this->Html->link('Espace membre','/mon-espace'); ?>
-                            <ul class="child-navigation">
-<?php echo'<li>'.$this->Html->link('Se connecter','/Users/login').'</li>'; ?>
-<?php echo'<li>'.$this->Html->link("s'inscrire",'/partenaires/add').'</li>'; ?>
-                            </ul>
+                            <?php  if (is_null($this->request->session()->read('Auth.User.username'))){
+                            echo"<ul class='child-navigation'><li>".
+                            $this->Html->link('Se connecter','/Users/login')."
+ </li><li>
+                            ".$this->Html->link('inscription','/partenaires/add')." </li></ul>";
+                    }
+                    ?>
 
                         </li>
                         <li class="has-child"><?= $this->Html->link('Contact','/nous-contacter'); ?>

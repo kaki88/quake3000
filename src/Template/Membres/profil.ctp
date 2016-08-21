@@ -18,7 +18,7 @@
                     <aside>
                         <ul class="sidebar-navigation">
                             <li class="active"><a href="profile.html"><i class="fa fa-user"></i><span>Profil</span></a></li>
-                            <li><a href="my-properties.html"><i class="fa fa-home"></i><span>Mes annonces</span></a></li>
+                            <li><?= $this->Html->link('Mes annonces','/mes-annonces') ?></li>
                         </ul>
                     </aside>
                 </section><!-- /#sidebar -->
@@ -54,11 +54,7 @@
                                                 </div>
                                                 <div class="col-md-8 col-sm-8">
                                                     <div class="form-group">
-                                                        <select name="account-agency" id="account-agency">
-                                                            <option value="">Agency</option>
-                                                            <option value="1">Estate+</option>
-                                                            
-                                                        </select>
+                                                     <label><?= $users->company_name; ?></label>
                                                     </div><!-- /.form-group -->
                                                 </div>
                                             </div>
@@ -71,28 +67,26 @@
                                             <dl class="contact-fields">
                                                 <dt><label for="form-account-name">Nom:</label></dt>
                                                 <dd><div class="form-group">
-                                                    <input type="text" class="form-control" id="form-account-name" name="form-account-name" required value="Jeffrey Scott">
-                                                </div><!-- /.form-group --></dd>
+                                                        <?= $users->first_name; ?>
+                                                    </div><!-- /.form-group --></dd>
                                                 <dt><label for="form-account-name">Prénom:</label></dt>
                                                 <dd><div class="form-group">
-                                                    <input type="text" class="form-control" id="form-account-name" name="form-account-name" required value="Jeffrey Scott">
-                                                </div><!-- /.form-group --></dd>
+                                                        <?= $users->last_name; ?>
+                                                    </div><!-- /.form-group --></dd>
                                                 <dt><label for="form-account-phone">Téléphone:</label></dt>
                                                 <dd><div class="form-group">
-                                                    <input type="text" class="form-control" id="form-account-phone" name="form-account-phone" value="(123) 456 789">
-                                                </div><!-- /.form-group --></dd>
+                                                        <?= $users->phone; ?>
+                                                    </div><!-- /.form-group --></dd>
                                                 <dt><label for="form-account-email">Email:</label></dt>
                                                 <dd><div class="form-group">
-                                                    <input type="text" class="form-control" id="form-account-email" name="form-account-phone" value="jeffrey.scott@example.com">
-                                                </div><!-- /.form-group --></dd>
+                                                        <?= $users->email; ?>
+                                                    </div><!-- /.form-group --></dd>
                                             </dl>
                                         </section>
                                         <section id="about-me">
                                             <h3>À propos de moi!</h3>
                                             <div class="form-group">
-                                                <textarea class="form-control" id="form-contact-agent-message" rows="5" name="form-contact-agent-message">
-Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras et dui vestibulum, bibendum purus sit amet, vulputate mauris. Ut adipiscing gravida tincidunt. Duis euismod placerat rhoncus.
-Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. Aliquam posuere fermentum lorem, a aliquam mauris rutrum.</textarea>
+                                                <?= $users->description; ?>
                                             </div><!-- /.form-group -->
                                         </section>
                                         <section id="social">
@@ -100,19 +94,19 @@ Phasellus mollis imperdiet placerat. Sed ac turpis nisl. Mauris at ante mauris. 
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-twitter"></i></span>
-                                                    <input type="text" class="form-control" id="account-social-twitter" name="account-social-twitter">
+                                                    <?= $users->twitter_link; ?>
                                                 </div>
                                             </div><!-- /.form-group -->
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-facebook"></i></span>
-                                                    <input type="text" class="form-control" id="account-social-facebook" name="account-social-facebook" >
+                                                    <?= $users->facebook_link; ?>
                                                 </div>
                                             </div><!-- /.form-group -->
                                             <div class="form-group">
                                                 <div class="input-group">
                                                     <span class="input-group-addon"><i class="fa fa-linkedin"></i></span>
-                                                    <input type="text" class="form-control" id="account-social-facebook" name="account-social-facebook" >
+                                                    <?= $users->linkedin_link; ?>
                                                 </div>
                                             </div><!-- /.form-group -->
                                             <div class="form-group clearfix">

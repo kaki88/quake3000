@@ -34,7 +34,7 @@ class OffresController extends AppController{
             $column = 'ads.created';
             $sorting = $sort;
         }
-        if (isset($this->request->query['surface'])){
+         if  (isset($this->request->query['surface'])){
             $surface= $this->request->query['surface'];
             $column = 'ads.surface';
             $sorting = $surface;
@@ -44,7 +44,7 @@ class OffresController extends AppController{
             $column = 'ads.price';
             $sorting = $prix;
         }
-        else {
+        if(empty($_GET)){
             $column = 'ads.created';
             $sorting = 'desc';
         }

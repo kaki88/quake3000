@@ -54,6 +54,7 @@ class PartenairesController extends AppController
             $CreatedUser->zipcode = $this->request->data['zipcode'];
             $CreatedUser->city = $this->request->data['city'];
             $CreatedUser->phone = $this->request->data['phone'];
+            $CreatedUser->description = $this->request->data['description'];
             $CreatedUser->website_link = $this->request->data['website_link'];
             $CreatedUser->facebook_link = $this->request->data['facebook_link'];
             $CreatedUser->twitter_link = $this->request->data['twitter_link'];

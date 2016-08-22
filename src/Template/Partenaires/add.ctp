@@ -45,24 +45,30 @@
                             ?></div>
                         <div class="form-group">
                         <?php
-                        echo $this->Form->input('email');
+                        echo $this->Form->input('email',['required']);
                         echo $this->Form->input('is_hidden',['type' => 'checkbox', 'label' => 'Cacher l\'e-mail sur le site']);
                         ?></div>
                         <div class="form-group">
                         <?php
-                        echo $this->Form->input('phone',['label' => 'Téléphone']);
+                        echo $this->Form->input('phone',['label' => 'Téléphone','required']);
                         ?>
                         </div>
                         <div class="form-group">
                         <?php
-                        echo $this->Form->input('username',['label' => 'Pseudonyme']);
+                        echo $this->Form->input('username',['label' => 'Pseudonyme', 'required']);
                         ?>
                         </div>
                         <div class="form-group">
                         <?php
-                        echo $this->Form->input('password',['label' => 'Mot de passe']);
+                        echo $this->Form->input('password',['label' => 'Mot de passe','required']);
                         ?>
                         </div>
+
+                        <div class="form-group">
+                            <label for="submit-description">A propos de vous</label>
+                            <textarea class="form-control" id="submit-description" rows="8" name="description" required></textarea>
+                        </div>
+
                         <div class="form-group">
                         <?php
                          echo $this->Form->input('website_link',['label' => 'URL de votre site']);

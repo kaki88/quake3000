@@ -211,7 +211,7 @@ foreach  ($ads as $ad){
 
                     </section><!-- /#properties-->
                     </section><!-- /#results -->
-                </div><!-- /.col-md-9 -->
+
 
             </div><!-- /.row -->
         </div><!-- /.container -->

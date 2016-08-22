@@ -85,10 +85,12 @@
                                         <span class="search-count"><?= $this->Paginator->counter() ?> </span>
                                     <div class="sorting">
                                         <div class="form-group">
-                                            <select name="sorting">
+
+
+                                            <select name="sorting" id="sorting">
                                                 <option value="">Trier par</option>
-                                                <option value="1">Ordre croissant</option>
-                                                <option value="2">Ordre décroissant</option>
+                                                <option value="?sort=asc" <?php if($sort == 'asc') echo "selected" ?>>Ordre croissant</option>
+                                                <option value="?sort=desc" <?php if($sort == 'desc') echo "selected" ?>>Ordre décroissant</option>
                                             </select>
                                         </div><!-- /.form-group -->
                                     </div>
@@ -216,3 +218,11 @@ echo "
    <script type="text/javascript" src="../js/jquery.slider.js"></script>
    <script type="text/javascript" src="../js/markerclusterer_packed.js"></script>
    <script type="text/javascript" src="../js/custom.js"></script>
+
+   <script>
+       jQuery(function () {
+           jQuery("#sorting").change(function () {
+               location.href = jQuery(this).val();
+           })
+       })
+   </script>

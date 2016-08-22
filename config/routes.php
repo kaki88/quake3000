@@ -56,14 +56,18 @@ Router::scope('/', function (RouteBuilder $routes) {
     $routes->connect('/partenaires', ['controller' => 'Partenaires', 'action' => 'index']);
 
 //details offre
-    Router::connect('/fiches/:slug', array(
-        'plugin' => false,
-        'controller' => 'Fiches',
-        'action' => 'index',
-    ),array(
-            "pass"=>array("slug")
-        )
+
+    $routes->connect(
+        '/fiches/:slug',
+        ['controller' => 'Fiches', 'action' => 'index'],
+        [
+            'pass' => ['slug'],
+        'slug' => '\d+',
+    ]
     );
+
+
+
 
 //voir les offres
     $routes->connect('/offres',['controller'=>'Offres','action'=>'index']);

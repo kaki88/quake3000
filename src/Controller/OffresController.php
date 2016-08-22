@@ -28,18 +28,17 @@ class OffresController extends AppController{
         }
     }
 	public function index(){
-
-
         $ad = TableRegistry::get('ads');
+        $sort =$this->request->query['sort'];
         $ads = $ad->find()
             ->contain(['TypeAds', 'Towns', 'Images'])
-            ->order(['ads.id' => 'DESC']);
+            ->order(['ads.created' => $sort]);
         $this->set(array('data'=>$ads));
         $this->set('ads', $this->paginate($ads));
         $number = $ads->count();
         $this->set(compact('ads'));
         $this->set(compact('number'));
-
+        $this->set(compact('sort'));
 
     }
 

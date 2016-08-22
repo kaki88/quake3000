@@ -664,4 +664,8 @@ function drawFooterThumbnails(){
             createThumbnail();
         }
     });
+
+
+
+
 }

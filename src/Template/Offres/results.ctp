@@ -88,8 +88,8 @@
                                         <label>Date de parution</label>
                                         <select name="sorting" id="sorting">
                                             <option value="">Trier par</option>
-                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&sort=asc" <?php if(isset($this->request->query['sort']) && $sort == 'asc') echo "selected" ?>>Les plus récentes</option>
-                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&sort=desc"  <?php if(isset($this->request->query['sort']) && $sort == 'desc') echo "selected" ?>>Les plus anciennes</option>
+                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&sort=desc" <?php if(isset($this->request->query['sort']) && $sort == 'asc') echo "selected" ?>>Les plus récentes</option>
+                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&sort=asc"  <?php if(isset($this->request->query['sort']) && $sort == 'desc') echo "selected" ?>>Les plus anciennes</option>
                                         </select>
                                     </div><!-- /.form-group -->
 

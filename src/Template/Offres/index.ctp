@@ -88,8 +88,8 @@
 <label>Date de parution</label>
                                             <select name="sorting" id="sorting">
                                                 <option value="">Trier par</option>
-                                                <option value="?sort=asc" <?php if(isset($this->request->query['sort']) && $sort == 'asc') echo "selected" ?>>Les plus récentes</option>
-                                                <option value="?sort=desc" <?php if(isset($this->request->query['sort']) && $sort == 'desc') echo "selected" ?>>Les plus anciennes</option>
+                                                <option value="?sort=asc" <?php if(isset($this->request->query['sort']) && $sort == 'desc') echo "selected" ?>>Les plus récentes</option>
+                                                <option value="?sort=desc" <?php if(isset($this->request->query['sort']) && $sort == 'asc') echo "selected" ?>>Les plus anciennes</option>
                                             </select>
                                         </div><!-- /.form-group -->
 

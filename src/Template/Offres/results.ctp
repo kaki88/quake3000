@@ -138,7 +138,7 @@ foreach  ($ads as $ad){
                                 echo "
                                 <div class='col-md-4 col-sm-4'>
                                     <div class='property'>
-                                        <a href='fiches/$ad->id'>
+                                        <a href='../fiches/$ad->id'>
                                             <div class='property-image'>";
                                                 if ($image){
                                                 echo "<img alt='' height='200' src='../files/$ad->id&$image->id.png '>";

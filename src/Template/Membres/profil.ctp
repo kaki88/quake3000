@@ -39,12 +39,6 @@
                                     <!-- Le bloc suivant n'apparait que pour les Professionnels /!\ -->
 
                                         <!-- La prochaine div ne vous sera sans doute pas utile, je la laisse au cas où -->
-                                        <div class="checkbox switch" id="agent-switch" data-agent-state="is-agent">
-                                            <label>
-                                                Je suis un professionnel<input type="checkbox">
-                                            </label>
-                                        </div>
-
 
                                         <section id="agency">
                                             <h3>Mon Agence</h3>

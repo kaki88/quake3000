@@ -77,7 +77,7 @@
                 <!-- end Search Box -->
             <div class="col-md-12 col-sm-12">
                 <section id="results">
-                    <header><h1>Liste des biens</h1></header>
+                    <header><h1>Résultats de votre recherche</h1></header>
                     <section id="search-filter">
                         <figure><h3><i class="fa fa-search"></i>Resultats:</h3>
                             <span class="search-count"><?= $number ?>  </span>

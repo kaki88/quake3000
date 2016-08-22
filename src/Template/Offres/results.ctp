@@ -75,24 +75,52 @@
                     </div><!-- /.search-box-inner -->
                 </div>
                 <!-- end Search Box -->
-                <div class="col-md-12 col-sm-12">
-                    <section id="results">
-                        <header><h1>Résultats de votre recherche</h1></header>
-                        <section id="search-filter">
-                            <figure><h3><i class="fa fa-search"></i>Resultats:</h3>
-                                <span class="search-count"><?= $number ?> </span>
+            <div class="col-md-12 col-sm-12">
+                <section id="results">
+                    <header><h1>Liste des biens</h1></header>
+                    <section id="search-filter">
+                        <figure><h3><i class="fa fa-search"></i>Resultats:</h3>
+                            <span class="search-count"><?= $number ?>  </span>
+                            <figure><h3><i class="fa fa-file-text"></i>Page(s):</h3>
+                                <span class="search-count"><?= $this->Paginator->counter() ?> </span>
                                 <div class="sorting">
                                     <div class="form-group">
-                                        <select name="sorting">
+                                        <label>Date de parution</label>
+                                        <select name="sorting" id="sorting">
                                             <option value="">Trier par</option>
-                                            <option value="1">Ordre croissant</option>
-                                            <option value="2">Ordre décroissant</option>
+                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&sort=asc" <?php if(isset($this->request->query['sort']) && $sort == 'asc') echo "selected" ?>>Les plus récentes</option>
+                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&sort=desc"  <?php if(isset($this->request->query['sort']) && $sort == 'desc') echo "selected" ?>>Les plus anciennes</option>
+                                        </select>
+                                    </div><!-- /.form-group -->
+
+                                    <div class="form-group">
+                                        <label>Surface</label>
+                                        <select name="surface" id="surface">
+                                            <option value="">Trier par</option>
+                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&m=asc"  <?php if(isset($this->request->query['m']) && $surface == 'asc') echo "selected" ?>>Les plus petites</option>
+                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&m=desc"  <?php if(isset($this->request->query['m']) && $surface == 'desc') echo "selected" ?>>Les plus grandes</option>
+                                        </select>
+                                    </div><!-- /.form-group -->
+
+                                    <div class="form-group">
+                                        <label>Prix</label>
+                                        <select name="surface" id="prix">
+                                            <option value="">Trier par</option>
+                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&prix=asc"   <?php if(isset($this->request->query['prix']) && $prix == 'asc') echo "selected" ?>>Les moins chers</option>
+                                            <option value="?city=<?= $this->request->query['city'] ?>&zipcode=<?= $this->request->query['zipcode'] ?>&typeoffre=<?= $this->request->query['typeoffre'] ?>&typebien=<?= $this->request->query['typebien'] ?>&surface=<?= $this->request->query['surface'] ?>&sort=desc"  <?php if(isset($this->request->query['prix']) && $prix == 'desc') echo "selected" ?>>Les plus chers</option>
                                         </select>
                                     </div><!-- /.form-group -->
                                 </div>
                             </figure>
-                        </section>
-                        <div id="properties">
+                    </section>
+
+
+
+
+
+
+
+                    <div id="properties">
                             <div class="row">
 
 
@@ -208,3 +236,20 @@ foreach  ($ads as $ad){
     <script type="text/javascript" src="../js/jquery.slider.js"></script>
     <script type="text/javascript" src="../js/markerclusterer_packed.js"></script>
     <script type="text/javascript" src="../js/custom.js"></script>
+<script>
+    jQuery(function () {
+        jQuery("#sorting").change(function () {
+            window.location.href = jQuery(this).val();
+        })
+    })
+    jQuery(function () {
+        jQuery("#surface").change(function () {
+            window.location.href = jQuery(this).val();
+        })
+    })
+    jQuery(function () {
+        jQuery("#prix").change(function () {
+            window.location.href = jQuery(this).val();
+        })
+    })
+</script>

@@ -41,7 +41,10 @@
                                 </div><!-- /.col-md-4 -->
                                 <div class="col-md-8 col-sm-7">
                                     <header><h3>Nous sommes ici !</h3></header>
-                                    <div id="contact-map"></div>
+                                    <div id="contact-map">
+                                        <div id="map" style="height: 200px;" class="map-up"></div>
+                                    </div>
+
                                 </div><!-- /.col-md-8 -->
                             </div><!-- /.row -->
                         </section><!-- /#agent-info -->
@@ -61,8 +64,24 @@
 
 
 
-<script>
-    _latitude = 48.87;
-    _longitude = 2.29;
-    google.maps.event.addDomListener(window, 'load', contactUsMap(_latitude,_longitude));
+
+
+    <script async defer
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyD6Zs1p5MxC9bnpOoJHyKwR6lTta1Q6Qs8&signed_in=true&callback=initMap"></script>
+
+    <script>
+        function initMap() {
+            var myLatLng = {lat:  48.87, lng: 5.29};
+            var map = new google.maps.Map(document.getElementById('map'), {
+                zoom: 7,
+                scrollwheel: false,
+                center: {lat: 48.354878, lng: 5.692662}
+            });
+            var marker = new google.maps.Marker({
+                map: map,
+                position: myLatLng,
+                title: 'Hello World!'
+            });
+
+            }
 </script>

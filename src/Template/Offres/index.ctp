@@ -87,18 +87,29 @@
                                         <div class="form-group">
 <label>Date de parution</label>
                                             <select name="sorting" id="sorting">
-                                                <option value="?sort=asc" <?php if($sort == 'asc') echo "selected" ?>>Ordre croissant</option>
-                                                <option value="?sort=desc" <?php if($sort == 'desc') echo "selected" ?>>Ordre décroissant</option>
+                                                <option value="">Trier par</option>
+                                                <option value="?sort=asc" <?php if(isset($this->request->query['sort']) && $sort == 'desc') echo "selected" ?>>Les plus récentes</option>
+                                                <option value="?sort=desc" <?php if(isset($this->request->query['sort']) && $sort == 'asc') echo "selected" ?>>Les plus anciennes</option>
                                             </select>
                                         </div><!-- /.form-group -->
 
                                             <div class="form-group">
                                                 <label>Surface</label>
                                                 <select name="surface" id="surface">
-                                                    <option value="?surface=asc" <?php if($surface == 'asc') echo "selected" ?>>Ordre croissant</option>
-                                                    <option value="?surface=desc" <?php if($surface == 'desc') echo "selected" ?>>Ordre décroissant</option>
+                                                    <option value="">Trier par</option>
+                                                    <option value="?surface=asc" <?php if(isset($this->request->query['surface']) && $surface == 'asc') echo "selected" ?>>Les plus petites</option>
+                                                    <option value="?surface=desc" <?php if(isset($this->request->query['surface']) && $surface == 'desc') echo "selected" ?>>Les plus grandes</option>
                                                 </select>
                                             </div><!-- /.form-group -->
+
+                                        <div class="form-group">
+                                            <label>Prix</label>
+                                            <select name="surface" id="prix">
+                                                <option value="">Trier par</option>
+                                                <option value="?prix=asc"  <?php if(isset($this->request->query['prix']) && $prix == 'asc') echo "selected" ?>>Les moins chers</option>
+                                                <option value="?prix=desc" <?php if(isset($this->request->query['prix']) && $prix == 'desc') echo "selected" ?>>Les plus chers</option>
+                                            </select>
+                                        </div><!-- /.form-group -->
                                         </div>
                                 </figure>
                             </section>
@@ -200,7 +211,6 @@ echo "
                             </section><!-- /#properties-->
                         </section><!-- /#results -->
 
-
                 </div><!-- /.row -->
             </div><!-- /.container -->
         </div>
@@ -228,6 +238,16 @@ echo "
    <script>
        jQuery(function () {
            jQuery("#sorting").change(function () {
+               location.href = jQuery(this).val();
+           })
+       })
+       jQuery(function () {
+           jQuery("#surface").change(function () {
+               location.href = jQuery(this).val();
+           })
+       })
+       jQuery(function () {
+           jQuery("#prix").change(function () {
                location.href = jQuery(this).val();
            })
        })

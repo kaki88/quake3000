@@ -29,17 +29,36 @@ class OffresController extends AppController{
     }
 	public function index(){
         $ad = TableRegistry::get('ads');
-        $sort =$this->request->query['sort'];
+        if (isset($this->request->query['sort'])){
+            $sort = $this->request->query['sort'];
+            $column = 'ads.created';
+            $sorting = $sort;
+        }
+        if (isset($this->request->query['surface'])){
+            $surface= $this->request->query['surface'];
+            $column = 'ads.surface';
+            $sorting = $surface;
+        }
+        if (isset($this->request->query['prix'])){
+            $prix = $this->request->query['prix'];
+            $column = 'ads.price';
+            $sorting = $prix;
+        }
+        else {
+            $column = 'ads.created';
+            $sorting = 'desc';
+        }
         $ads = $ad->find()
             ->contain(['TypeAds', 'Towns', 'Images'])
-            ->order(['ads.created' => $sort]);
+            ->order([$column => $sorting]);
         $this->set(array('data'=>$ads));
         $this->set('ads', $this->paginate($ads));
         $number = $ads->count();
         $this->set(compact('ads'));
         $this->set(compact('number'));
         $this->set(compact('sort'));
-
+        $this->set(compact('surface'));
+        $this->set(compact('prix'));
     }
 
 

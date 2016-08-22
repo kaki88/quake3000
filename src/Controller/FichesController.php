@@ -47,6 +47,10 @@ echo "rien a voir ici";
             $this->set('imgs',$imgs);
         } 
         if ($this->request->is('post')){
+            $offers= $offre->find()
+                ->contain('Users')
+                ->where(['ads.id' => $id])->first();
+            $user= $offers->user->email;
         $ids = $id;
         $NewMessage = TableRegistry::get('messages');
         $CreatedMessage = $NewMessage->newEntity();
@@ -55,7 +59,7 @@ echo "rien a voir ici";
         $CreatedMessage->name = $this->request->data['name'];
         $CreatedMessage->ad_id = $ids;
             $NewMessage->save($CreatedMessage);
-            $to  = $mail;
+            $to  = $mail. $user;
             // Sujet
             $subject = 'votre message';
 

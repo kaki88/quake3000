@@ -3,6 +3,7 @@
 namespace App\Controller;
 
 use App\Controller\AppController;
+use Cake\Mailer\Email;
 use Cake\ORM\TableRegistry;
 use Cake\Utility\Inflector;
 
@@ -49,12 +50,21 @@ echo "rien a voir ici";
         $ids = $id;
         $NewMessage = TableRegistry::get('messages');
         $CreatedMessage = $NewMessage->newEntity();
-        $CreatedMessage->message = $this->request->data['message'];
-        $CreatedMessage->email = $this->request->data['email'];
+        $mes= $CreatedMessage->message = $this->request->data['message'];
+              $mail=$CreatedMessage->email = $this->request->data['email'];
         $CreatedMessage->name = $this->request->data['name'];
         $CreatedMessage->ad_id = $ids;
-        $NewMessage->save($CreatedMessage);
-        $this->redirect(['controller' => 'Offres', 'action' => 'index']);
+            $NewMessage->save($CreatedMessage);
+            $to  = $mail;
+            // Sujet
+            $subject = 'votre message';
+
+            // message
+            $message = $mes;
+
+            // Envoi
+            mail($to, $subject, $message);
+            $this->redirect('fiches/'.$ids);
     }
 
     }

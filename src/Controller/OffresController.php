@@ -29,17 +29,36 @@ class OffresController extends AppController{
     }
 	public function index(){
         $ad = TableRegistry::get('ads');
-        $sort =$this->request->query['sort'];
+        if (isset($this->request->query['sort'])){
+            $sort = $this->request->query['sort'];
+            $column = 'ads.created';
+            $sorting = $sort;
+        }
+         if  (isset($this->request->query['surface'])){
+            $surface= $this->request->query['surface'];
+            $column = 'ads.surface';
+            $sorting = $surface;
+        }
+        if (isset($this->request->query['prix'])){
+            $prix = $this->request->query['prix'];
+            $column = 'ads.price';
+            $sorting = $prix;
+        }
+        if(empty($_GET)){
+            $column = 'ads.created';
+            $sorting = 'desc';
+        }
         $ads = $ad->find()
             ->contain(['TypeAds', 'Towns', 'Images'])
-            ->order(['ads.created' => $sort]);
+            ->order([$column => $sorting]);
         $this->set(array('data'=>$ads));
         $this->set('ads', $this->paginate($ads));
         $number = $ads->count();
         $this->set(compact('ads'));
         $this->set(compact('number'));
         $this->set(compact('sort'));
-
+        $this->set(compact('surface'));
+        $this->set(compact('prix'));
     }
 
 
@@ -88,13 +107,35 @@ class OffresController extends AppController{
             $pushall =  "for_sale = '$sale' AND for_rent = '$rent' ";
             array_push($array, $pushall);
         }
+
+
+        if (isset($this->request->query['sort'])){
+            $sort = $this->request->query['sort'];
+            $column = 'ads.created';
+            $sorting = $sort;
+        }
+        if  (isset($this->request->query['m'])){
+            $surface= $this->request->query['m'];
+            $column = 'ads.surface';
+            $sorting = $surface;
+        }
+        if (isset($this->request->query['prix'])){
+            $prix = $this->request->query['prix'];
+            $column = 'ads.price';
+            $sorting = $prix;
+        }
+        if(empty($this->request->query['prix']) && empty($this->request->query['sort']) && empty($this->request->query['m']) ){
+            $column = 'ads.created';
+            $sorting = 'desc';
+        }
         $ads = $adada->find()
             ->where(['is_active' => 1])
             ->andWhere([
                 'surface > '.$min[0].' AND surface < '.$min[1].'',
                 $array
             ])
-            ->contain(['TypeAds', 'Towns', 'Images']);
+            ->contain(['TypeAds', 'Towns', 'Images'])
+            ->order([$column => $sorting]);
 
 
 
@@ -110,6 +151,9 @@ class OffresController extends AppController{
         $this->set(compact('typeoffre'));
         $this->set(compact('min'));
         $this->set(compact('array'));
+        $this->set(compact('sort'));
+        $this->set(compact('surface'));
+        $this->set(compact('prix'));
     }
     public function edit($id = null)
     {
